@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.carousel-indicators {
+    background-color: rgba(133, 3, 3, 0) !important;
+}
+
+.carousel-control-next-icon {
+    background-color: rgba(31, 32, 32, 0.404);
+}
+
+.carousel-caption {
+    background-color: rgba(31, 32, 32, 0.404);
+}
+
+.carousel-control-prev-icon {
+    background-color: rgba(31, 32, 32, 0.404);
+}
+
+.d-block {
+    height: 35rem;
+    width: 100% !important;
+    margin-top: auto;
+}
+
+@media(max-width:700px) {
+    .d-block {
+        height: 20rem;
+    }
+}
+
+@media(max-width:420px) {
+    .d-block {
+        height: 15rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}
