@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-import logo2 from "/home/rodrigo/final/src/assets/img/logo2.png";
+import logo2 from "/src/assets/img/logo2.png";
 import './cabecera.css'
 
 
