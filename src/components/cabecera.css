@@ -1,12 +1,19 @@
-img{
-    width: 10rem;
+
+
+img {
+    width: 12rem;
 }
 
-*{
-    margin: 0;
+.nav-link:hover {
+    color: #da4747;
+    box-shadow: 0px 2px 0px 0px #0B1146;
+    -webkit-box-shadow: 0px 2px 0px 0px #0B1146;
+    -moz-box-shadow: 0px 2px 0px 0px #0B1146;
+    transition: all .3s;
 }
 
-.navbar{
-    width: 100%;
-    margin-bottom: 1rem;
+.bg-body-tertiary{
+    border-bottom: 18px solid #0D1348;
+    
 }
+
