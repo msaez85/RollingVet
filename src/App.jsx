@@ -1,6 +1,8 @@
 import './App.css'
 import NavScrollExample from './components/Cabecera'
 import UncontrolledExample from './components/Slider'
+import UncontrolledExample2 from './components/Footer'
+
 
 
 
@@ -13,6 +15,10 @@ function App() {
     <div className='slider'>
       <UncontrolledExample/>
     </div>
+    <div>
+      <UncontrolledExample2/>
+    </div>
+
 
     </>
   )

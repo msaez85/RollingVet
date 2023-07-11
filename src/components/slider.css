@@ -20,6 +20,8 @@
     height: 35rem;
     width: 100% !important;
     margin-top: auto;
+    margin-bottom: 1rem;
+    border-bottom: 5px solid #0D1348;
 }
 
 @media(max-width:700px) {
