@@ -33,8 +33,6 @@ function UncontrolledExample2() {
             <iframe class="border border-1 rounded"
                 src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d9783.526015723482!2d-65.20169509883819!3d-26.828648763243084!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sus!4v1689040573391!5m2!1ses-419!2sus"
                 loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-{/* 
-      <h4>Aca estaria un mapita con las sucursales</h4> */}
       </Tab>
       <Tab eventKey="contact" title="Redes" className="redes">
         <div><ImFacebook2/>
