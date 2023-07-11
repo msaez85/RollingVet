@@ -14,20 +14,28 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    padding: 2rem 0rem;
+}
+
+.nav-link:hover{
+    cursor: pointer;
+    transform:scale(0.9,0.9);
+    transition: all .2s;
 }
 
 .redes svg{
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: rgb(37, 37, 109);
     display: flex;
     margin: auto;
 margin-bottom: 1rem;}
 
+
 .redes svg:hover{
     cursor: pointer;
-    transform: scale(1.1);
-
+    transform: scale(1.5,1.5);
+    transition: all .2s;
 }
 
 .texto{
@@ -47,6 +55,7 @@ margin-bottom: 1rem;}
     text-align: center;
     font-size: 1rem;;
     gap: 2rem;
+    padding: 0rem 1rem;
     
 }
 
