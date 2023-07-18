@@ -6,12 +6,12 @@ import gato from "/src/assets/img/gato.jpeg"
 
 import "./slider.css"
 
-function UncontrolledExample() {
+function Slider() {
   return (
-    <Carousel>
-      <Carousel.Item>
+    <Carousel data-aos="fade-up">
+      <Carousel.Item >
         <img
-          className="d-block w-100"
+          className="d-block w-100 rounded-1"
           src={gato}
           alt="First slide"
         />
@@ -22,7 +22,7 @@ function UncontrolledExample() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block w-100 rounded-1"
           src={perro1}
           alt="Second slide"
         />
@@ -33,7 +33,18 @@ function UncontrolledExample() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block w-100 rounded-1"
+          src={slider1}
+          alt="Third slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Su mejor amigo , en las mejores manos</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 rounded-1"
           src={slider1}
           alt="Third slide"
         />
@@ -46,4 +57,4 @@ function UncontrolledExample() {
   );
 }
 
-export default UncontrolledExample;
+export default Slider;

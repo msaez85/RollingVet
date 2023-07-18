@@ -2,6 +2,7 @@
     width: 100%;
     margin: 2rem 0rem ;
     min-height: 10rem;
+    
 }
 
 .tab-content > .active{
@@ -32,11 +33,14 @@
 margin-bottom: 1rem;}
 
 
+
 .redes svg:hover{
     cursor: pointer;
-    transform: scale(1.5,1.5);
+    transform:scale(1.5,1.5);
     transition: all .2s;
 }
+
+
 
 .texto{
     background-color: #0E1449;
@@ -56,8 +60,10 @@ margin-bottom: 1rem;}
     font-size: 1rem;;
     gap: 2rem;
     padding: 0rem 1rem;
-    
+
 }
+
+
 
 .telefono svg{
     font-size: 2.2rem;
