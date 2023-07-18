@@ -1,7 +1,6 @@
 
-
 img {
-    width: 12rem;
+    width: 9rem;
 }
 
 .nav-link:hover {
@@ -14,6 +13,7 @@ img {
 
 .bg-body-tertiary{
     border-bottom: 18px solid #0D1348;
-    
+    width: 100%;
+    background-color: rgb(255, 255, 255) !important;
 }
 

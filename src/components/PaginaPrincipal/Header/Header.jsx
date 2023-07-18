@@ -1,14 +1,11 @@
-
 import Container from "react-bootstrap/Container";
-
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-
 import logo2 from "/src/assets/img/logo2.png";
-import './cabecera.css'
+import './header.css'
 
 
-function NavScrollExample() {
+function Header() {
     return (
         
         <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="light" bg="light" >
@@ -33,4 +30,4 @@ function NavScrollExample() {
     );
 }
 
-export default NavScrollExample;
+export default Header;

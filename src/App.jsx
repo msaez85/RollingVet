@@ -1,7 +1,8 @@
 import './App.css'
-import NavScrollExample from './components/Cabecera'
-import UncontrolledExample from './components/Slider'
-import UncontrolledExample2 from './components/Footer'
+import Header from './components/PaginaPrincipal/Header/Header'
+import Slider from './components/PaginaPrincipal/Slider/Slider'
+import Footer from './components/PaginaPrincipal/Footer/Footer'
+import Servicios from './components/PaginaPrincipal/Servicios/Servicos'
 
 
 
@@ -9,14 +10,15 @@ import UncontrolledExample2 from './components/Footer'
 function App() {
   return (
     <>
-    <div className="principal">
-      <NavScrollExample/>
+    <div className="principals">
+      <Header/>
     </div>
     <div className='slider'>
-      <UncontrolledExample/>
+      <Slider/>
     </div>
+    <Servicios/>
     <div>
-      <UncontrolledExample2/>
+      <Footer/>
     </div>
 
 
