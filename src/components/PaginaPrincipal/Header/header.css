@@ -1,0 +1,19 @@
+
+img {
+    width: 9rem;
+}
+
+.nav-link:hover {
+    color: #da4747;
+    box-shadow: 0px 2px 0px 0px #0B1146;
+    -webkit-box-shadow: 0px 2px 0px 0px #0B1146;
+    -moz-box-shadow: 0px 2px 0px 0px #0B1146;
+    transition: all .3s;
+}
+
+.bg-body-tertiary{
+    border-bottom: 18px solid #0D1348;
+    width: 100%;
+    background-color: rgb(255, 255, 255) !important;
+}
+

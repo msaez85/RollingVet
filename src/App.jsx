@@ -1,18 +1,26 @@
 import './App.css'
-import NavScrollExample from './components/Cabecera'
-import UncontrolledExample from './components/Slider'
+import Header from './components/PaginaPrincipal/Header/Header'
+import Slider from './components/PaginaPrincipal/Slider/Slider'
+import Footer from './components/PaginaPrincipal/Footer/Footer'
+import Servicios from './components/PaginaPrincipal/Servicios/Servicos'
+
 
 
 
 function App() {
   return (
     <>
-    <div className="principal">
-      <NavScrollExample/>
+    <div className="principals">
+      <Header/>
     </div>
     <div className='slider'>
-      <UncontrolledExample/>
+      <Slider/>
     </div>
+    <Servicios/>
+    <div>
+      <Footer/>
+    </div>
+
 
     </>
   )
