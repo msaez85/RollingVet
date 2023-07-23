@@ -24,8 +24,8 @@ function Servicos() {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card>
-          <Card.Img
+        <Card >
+          <Card.Img 
             variant="top"
             src="https://www.clinicaveterinariaejea.com/wp-content/uploads/2014/05/clinica_veterinaria_ejea_073-1024x682.jpeg"
           />
@@ -61,7 +61,7 @@ function Servicos() {
           </Card.Body>
         </Card>
       </CardGroup>
-      <div className="ver">
+      <div className="ver" data-aos="fade-up">
         <Button variant="primary">Ver Mas</Button>{" "}
       </div>
     </>
