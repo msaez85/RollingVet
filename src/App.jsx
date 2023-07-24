@@ -23,7 +23,9 @@ function App() {
       <hr />
       <ProductosDestacados/>
       <hr />
-      <div>
+      <Testimonios/>
+      <hr />
+      <div className="foot">
         <Footer />
       </div>
     </>

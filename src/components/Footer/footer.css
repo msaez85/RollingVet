@@ -1,15 +1,32 @@
-.tab-content{
+.tab-content {
     width: 100%;
-    margin: 2rem 0rem ;
+    margin: 2rem 0rem;
     min-height: 10rem;
-    
 }
 
-.tab-content > .active{
+
+.tab-content>.active {
     display: flex;
 }
 
-.redes{
+
+#uncontrolled-tab-example-tab-profile,
+#uncontrolled-tab-example-tab-contact,
+#uncontrolled-tab-example-tab-home {
+    color: rgb(255, 255, 255);
+    background-color: #138c91;
+    border-bottom: solid 1px rgb(180, 180, 180);
+}
+
+
+#uncontrolled-tab-example-tab-profile:hover,
+#uncontrolled-tab-example-tab-contact:hover,
+#uncontrolled-tab-example-tab-home:hover {
+    background-color: #0d5153;
+}
+
+
+.redes {
     width: 100%;
     height: 100%;
     flex-direction: row;
@@ -19,60 +36,61 @@
     padding: 2rem 0rem;
 }
 
-.nav-link:hover{
+
+.nav-link:hover {
     cursor: pointer;
-    transform:scale(0.9,0.9);
+    transform: scale(1, 1);
     transition: all .2s;
 }
 
-.redes svg{
-    font-size: 2rem;
-    color: rgb(37, 37, 109);
+
+.redes svg {
+    font-size: 2.3rem;
     display: flex;
     margin: auto;
-margin-bottom: 1rem;}
+    color: white;
+    margin-bottom: 1rem;
+}
 
 
-
-.redes svg:hover{
+.redes svg:hover {
     cursor: pointer;
-    transform:scale(1.5,1.5);
+    transform: scale(1.5, 1.5);
     transition: all .2s;
 }
 
 
-
-.texto{
-    background-color: #0E1449;
-    color: aliceblue;
+.texto {
+    background-color: #0d5153;
+    color: rgb(243, 243, 243);
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.telefono{
+
+.telefono {
     width: 100%;
     height: 100%;
     flex-direction: row;
     justify-content: center;
     align-items: start;
     text-align: center;
-    font-size: 1rem;;
+    font-size: 1rem;
+    ;
     gap: 2rem;
     padding: 0rem 1rem;
-
 }
 
 
-
-.telefono svg{
+.telefono svg {
     font-size: 2.2rem;
-    color: rgb(37, 37, 109);
+    color: rgb(255, 255, 255);
     display: flex;
     margin: auto;
     margin-bottom: 1rem;
-
 }
+
 
 .mapa {
     width: 100%;
@@ -82,7 +100,8 @@ margin-bottom: 1rem;}
     align-items: center;
 }
 
-.mapa iframe{
+
+.mapa iframe {
     width: 80%;
     height: 100%;
 }
@@ -90,15 +109,13 @@ margin-bottom: 1rem;}
 
 @media(max-width:470px) {
     .telefono {
-       font-size: 0.7rem;
+        font-size: 0.7rem;
     }
 
-    .telefono svg{
-        font-size: 1.2rem;
-        color: rgb(37, 37, 109);
+    .telefono svg {
+        font-size: 1.8rem;
         display: flex;
         margin: auto;
         margin-bottom: 1rem;
-    
     }
 }
