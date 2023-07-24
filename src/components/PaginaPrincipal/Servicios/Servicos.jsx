@@ -6,12 +6,13 @@ import Button from "react-bootstrap/Button";
 function Servicos() {
   return (
     <>
-      <div data-aos="fade-up">
+    <div data-aos="fade-up">
+      <div >
         <h2 style={{ textAlign: "center", margin: "2rem", color: "black" }}>
           NUESTROS SERVICIOS
         </h2>
       </div>
-      <CardGroup data-aos="fade-up">
+      <CardGroup >
         <Card>
           <Card.Img
             variant="top"
@@ -61,8 +62,9 @@ function Servicos() {
           </Card.Body>
         </Card>
       </CardGroup>
-      <div className="ver" data-aos="fade-up">
+      <div className="ver">
         <Button variant="primary">Ver Mas</Button>{" "}
+      </div>
       </div>
     </>
   );

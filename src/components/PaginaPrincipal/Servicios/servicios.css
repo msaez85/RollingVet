@@ -5,7 +5,7 @@
 }
 
 .card-body{
-    height:10rem;
+    height:fit-content;
     text-align: center;
     border: 1px solid rgba(105, 101, 101, 0.349);
 }
