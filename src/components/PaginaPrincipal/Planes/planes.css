@@ -3,9 +3,8 @@
     display: flex;
     flex-direction: row;
     margin: 2rem 0rem;
-    border: solid rgba(10, 1, 1, 0.192) 5px;
-    border-radius: 20px;
-    padding: 1rem 0rem;
+    
+    padding: 1rem 2rem;
 }
 
 .contenedor-principal img{
@@ -18,24 +17,35 @@
     border-radius: 2rem;
     background-color: #F7AB26;
     padding: 1rem;
+    margin:5rem 1rem 0rem 0rem
 }
 
 .container{
     margin: auto;
 }
 
+
+
+
 @media(max-width:630px) {
     .contenedor-principal Button{
         width: 100%;
         justify-content: center;
         align-items: center;
+        margin-top: 1rem;
+        
     }
     .contenedor-principal {
         display: flex;
         flex-direction: column-reverse;
         text-align: justify;
+        padding: 0rem;
+        margin: 0rem;
     }
-
+    
+    .ocultar{
+        display: none;
+    }
     .contenedor-principal img{
         margin:auto;
         display: flex;
