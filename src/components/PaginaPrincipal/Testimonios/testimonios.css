@@ -1,0 +1,14 @@
+.cartas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0.5rem;
+}
+
+
+@media(max-width:425px) {
+    .cartas{
+        flex-direction: column;
+    }
+}

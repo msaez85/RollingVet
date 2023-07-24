@@ -7,7 +7,7 @@ function Planes() {
     <>
       <div className="contenedor-principal" data-aos="fade-up">
         <div className="container w-75" data-aos="zoom-in">
-          <h2>La obra social de tu mascota es RollingVet.</h2>
+          <h1 style={{color:"#F7AB26"}}>La obra social de tu mascota es RollingVet.</h1>
           <h5>
             Si estabas buscando un plan de salud para tu perro y gato, RollingVet es tu
             mejor decisión ya que los cuidamos con la mejor cobertura de Tucuman.

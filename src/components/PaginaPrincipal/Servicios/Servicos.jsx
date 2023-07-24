@@ -8,7 +8,7 @@ function Servicos() {
     <>
     <div data-aos="fade-up">
       <div >
-        <h2 style={{ textAlign: "center", margin: "2rem", color: "black" }}>
+        <h2 style={{ textAlign: "center", margin: "2rem", color: "#F7AB26" }}>
           NUESTROS SERVICIOS
         </h2>
       </div>

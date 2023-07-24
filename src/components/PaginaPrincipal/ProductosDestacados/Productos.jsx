@@ -4,7 +4,7 @@ function ProductosDestacados() {
   return (
     <>
     <div data-aos="fade-up">
-    <h3 style={{textAlign:"center", marginTop:"3rem"}}>PRODUCTOS DESTACADOS</h3>
+    <h3 style={{textAlign:"center", marginTop:"3rem",color:"#F7AB26"}}>PRODUCTOS DESTACADOS</h3>
       <div className="productos" >
         <div id="ocultar">
           <img
