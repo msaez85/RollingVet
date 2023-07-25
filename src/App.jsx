@@ -17,14 +17,19 @@ function App() {
         <Slider />
       </div>
       <hr />
-      <Servicios />
+      <div className="services">
+        <Servicios />
+      </div>
       <hr />
-      <Planes />
+      <div className="planes">
+        <Planes />
+      </div>
       <hr />
-      <ProductosDestacados/>
+      <ProductosDestacados />
       <hr />
-      <Testimonios/>
-      <hr />
+      <div className="clientes">
+        <Testimonios />
+      </div>
       <div className="foot">
         <Footer />
       </div>

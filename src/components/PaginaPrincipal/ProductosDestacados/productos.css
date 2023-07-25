@@ -14,6 +14,23 @@
     transition: all 0.5s;
 }
 
+.tienda{
+    margin: 2rem 0rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tienda Button{
+    width: 30%;
+    border-radius: 12px;
+    border-color: #138C91;
+}
+
+.tienda Button:hover{
+    background-color: #138C91;
+}
+
 
 .productos img{
     width:10rem;

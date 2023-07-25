@@ -7,7 +7,7 @@ function Testimonios() {
   return (
     <>
     <div data-aos="fade-up">
-    <h4 style={{ textAlign: "center", marginTop: "4rem", color: "#F7AB26" }}>NUESTROS CLIENTES</h4>
+    <h3 style={{ textAlign: "center", marginTop: "1rem", color: "rgb(211, 98, 22)" }}>NUESTROS CLIENTES</h3>
     <div className="cartas">
      <Card className="text-center">
       <Card.Header>Marcos</Card.Header>
@@ -57,7 +57,7 @@ function Testimonios() {
       />
     </Figure>
         <Card.Text>
-          "Excelente atencion y profesionalismo"
+          "La mejor cobertura para tu mascota"
         </Card.Text>
       </Card.Body>
       <Card.Footer className="text-muted">6 days ago</Card.Footer>
