@@ -1,38 +1,16 @@
 import "./App.css";
-import Header from "./components/Header/Header";
-import Slider from "./components/PaginaPrincipal/Slider/Slider";
-import Footer from "./components/Footer/Footer";
-import Servicios from "./components/PaginaPrincipal/Servicios/Servicos";
-import Planes from "./components/PaginaPrincipal/Planes/Planes";
-import ProductosDestacados from "./components/PaginaPrincipal/ProductosDestacados/Productos";
-import Testimonios from "./components/PaginaPrincipal/Testimonios/Testimonios";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
+import PaginaPrincipal from "./components/PaginaPrincipal/PaginaPrincipal";
 
 function App() {
   return (
     <>
-      <div className="principals">
-        <Header />
-      </div>
-      <div className="slider">
-        <Slider />
-      </div>
-      <hr />
-      <div className="services">
-        <Servicios />
-      </div>
-      <hr />
-      <div className="planes">
-        <Planes />
-      </div>
-      <hr />
-      <ProductosDestacados />
-      <hr />
-      <div className="clientes">
-        <Testimonios />
-      </div>
-      <div className="foot">
-        <Footer />
-      </div>
+      <Layout>
+        <Routes>
+          <Route path='/' element={<PaginaPrincipal />} />
+        </Routes>
+      </Layout>
     </>
   );
 }
