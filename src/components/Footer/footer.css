@@ -1,8 +1,11 @@
 .tab-content {
     width: 100%;
-    margin: 2rem 0rem;
+    padding: 2rem 0rem;
     min-height: 10rem;
+    background-color: #282540;
+    color: white;
 }
+
 
 
 .tab-content>.active {
