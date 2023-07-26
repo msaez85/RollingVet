@@ -1,0 +1,59 @@
+.productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 2rem;
+    gap: 3rem;
+}
+
+.productos div:hover{
+    cursor: pointer;
+    transform: scale(.9,.9);
+    transition: all 0.5s;
+}
+
+.tienda{
+    margin: 2rem 0rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tienda Button{
+    width: 30%;
+    border-radius: 12px;
+    border-color: #138C91;
+}
+
+.tienda Button:hover{
+    background-color: #138C91;
+}
+
+
+.productos img{
+    width:10rem;
+}
+
+
+@media(max-width:567px) {
+    .productos img{
+        width: 10rem;
+    }
+
+    .productos{
+        flex-direction: column;
+        gap: 3rem;
+        
+    }
+
+    #ocultar{
+        display: none;
+    }
+
+    .productos h4,h3{
+        font-size: 1rem;
+    }
+}
+

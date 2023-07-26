@@ -1,13 +1,15 @@
 .card-group{
     gap: 1rem;
-    margin: 1rem;
+    margin: 2rem 1.5rem;
     
 }
 
 .card-body{
-    height:10rem;
+    height:fit-content;
     text-align: center;
+    background-color: rgb(27, 26, 26);
     border: 1px solid rgba(105, 101, 101, 0.349);
+    color: white;
 }
 
 div>.card:hover{
@@ -32,7 +34,18 @@ div>.card:hover{
 
 
 .ver button{
-    width: 30%;
-    border:none;
+    width: 40%;
+    border:solid 2px #138C91;
+    border-radius: 12px;
+    
 }
 
+.ver button:hover{
+    background-color: #138C91;
+}
+
+@media(max-width:570px) {
+    div>h3{
+        font-size: 1.5rem;
+    }
+}

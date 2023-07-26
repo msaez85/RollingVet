@@ -6,12 +6,13 @@ import Button from "react-bootstrap/Button";
 function Servicos() {
   return (
     <>
-      <div data-aos="fade-up">
-        <h2 style={{ textAlign: "center", margin: "2rem", color: "black" }}>
+    <div data-aos="fade-up">
+      <div >
+        <h3 style={{ textAlign: "center", marginTop: "1rem", color: "rgb(211, 98, 22)" }}>
           NUESTROS SERVICIOS
-        </h2>
+        </h3>
       </div>
-      <CardGroup data-aos="fade-up">
+      <CardGroup >
         <Card>
           <Card.Img
             variant="top"
@@ -24,8 +25,8 @@ function Servicos() {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card>
-          <Card.Img
+        <Card >
+          <Card.Img 
             variant="top"
             src="https://www.clinicaveterinariaejea.com/wp-content/uploads/2014/05/clinica_veterinaria_ejea_073-1024x682.jpeg"
           />
@@ -62,7 +63,8 @@ function Servicos() {
         </Card>
       </CardGroup>
       <div className="ver">
-        <Button variant="primary">Ver Mas</Button>{" "}
+        <Button variant="outline-success">Ver Mas</Button>
+      </div>
       </div>
     </>
   );
