@@ -15,8 +15,9 @@ function Footer() {
         id="uncontrolled-tab-example"
         className="tabs nav-justified"
       >
+        
         <Tab eventKey="home" title="Telefonos" className="telefono">
-          <div>
+          <div className="feo"> 
             <ImPhone />
             <p>Sucursal Centro : +543815486688</p>
             <p>Lunes a Sabado:8 a 20 Hs</p>
