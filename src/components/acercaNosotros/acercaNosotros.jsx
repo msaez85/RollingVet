@@ -62,12 +62,4 @@ const AcercaDeNosotros = () => {
   );
 };
 
-const App = () => {
-  return (
-    <div>
-      <AcercaDeNosotros />
-    </div>
-  );
-};
-
 export default AcercaDeNosotros;
