@@ -1,13 +1,25 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-body{
-  background-color:#FFFFFF;
+body {
+  background-color: #FFFFFF;
 }
 
-.foot{
-  background-color:#138C91;
-  color:white;
+.foot {
+  background-color: #282540;
+  color: white;
+}
+
+.services {
+  padding: 2rem;
+}
+
+.planes {
+  padding: 2rem;
+}
+
+.clientes {
+  padding: 2rem;
 }

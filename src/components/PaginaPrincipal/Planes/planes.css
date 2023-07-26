@@ -2,20 +2,19 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    margin: 2rem 0rem;
-    
     padding: 1rem 2rem;
 }
 
 .contenedor-principal img{
     width: 75%;
-    margin: auto
+    margin: auto;
+    border-radius: 2rem;
 }
 
 .container Button{
     border: none;
-    border-radius: 2rem;
-    background-color: #F7AB26;
+    border-radius: 1rem;
+    background-color: #138C91;
     padding: 1rem;
     margin:5rem 1rem 0rem 0rem
 }

@@ -14,7 +14,7 @@
 #uncontrolled-tab-example-tab-contact,
 #uncontrolled-tab-example-tab-home {
     color: rgb(255, 255, 255);
-    background-color: #138c91;
+    background-color: #1a1b1b;
     border-bottom: solid 1px rgb(180, 180, 180);
 }
 
@@ -22,7 +22,8 @@
 #uncontrolled-tab-example-tab-profile:hover,
 #uncontrolled-tab-example-tab-contact:hover,
 #uncontrolled-tab-example-tab-home:hover {
-    background-color: #0d5153;
+    background-color: #dfdfdf;
+    color: #121313;
 }
 
 
@@ -61,7 +62,7 @@
 
 
 .texto {
-    background-color: #0d5153;
+    background-color: #121313;
     color: rgb(243, 243, 243);
     width: 100%;
     display: flex;
@@ -113,7 +114,7 @@
     }
 
     .telefono svg {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         display: flex;
         margin: auto;
         margin-bottom: 1rem;

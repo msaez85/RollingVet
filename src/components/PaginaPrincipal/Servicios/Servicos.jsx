@@ -8,9 +8,9 @@ function Servicos() {
     <>
     <div data-aos="fade-up">
       <div >
-        <h2 style={{ textAlign: "center", margin: "2rem", color: "#F7AB26" }}>
+        <h3 style={{ textAlign: "center", marginTop: "1rem", color: "rgb(211, 98, 22)" }}>
           NUESTROS SERVICIOS
-        </h2>
+        </h3>
       </div>
       <CardGroup >
         <Card>
@@ -63,7 +63,7 @@ function Servicos() {
         </Card>
       </CardGroup>
       <div className="ver">
-        <Button variant="primary">Ver Mas</Button>{" "}
+        <Button variant="outline-success">Ver Mas</Button>
       </div>
       </div>
     </>
