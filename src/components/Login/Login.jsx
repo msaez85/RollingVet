@@ -11,10 +11,27 @@ import "animate.css";
 import Button from "react-bootstrap/Button";
 
 const LoginExample = () => {
+  //HOOKS MODAL
   const [modal, setModal] = useState(false);
+  const [datos, setDatos] = useState({
+    email: "",
+    contra: "",
+  });
+
+  const handleInputChange = (e) => {
+    setDatos({
+      ...datos,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const mostrarModal = () => setModal(true);
   const cerrarModal = () => setModal(false);
+
+  const enviarDatos = (e) => {
+    e.preventDefault();
+    console.log("DATOS ENVIADOS: " + datos.email + " " + datos.contra);
+  };
 
   return (
     <>
@@ -39,7 +56,7 @@ const LoginExample = () => {
                 />{" "}
               </Card.Header>
               <Card.Body>
-                <form action="">
+                <Form onSubmit={enviarDatos}>
                   <ul>
                     <li className="p-2">
                       <img
@@ -51,10 +68,12 @@ const LoginExample = () => {
                       />
                       <input
                         placeholder="Email"
+                        name="email"
                         className="inputStyle"
                         type="text"
                         required
                         autoComplete="off"
+                        onChange={handleInputChange}
                       />
                     </li>
                     <li className="p-2">
@@ -69,27 +88,32 @@ const LoginExample = () => {
                       <input
                         className="inputStyle"
                         type="password"
+                        name="contra"
                         placeholder="Contraseña"
+                        onChange={handleInputChange}
                         required
                       />
                     </li>
                   </ul>
-                </form>
-                <div className="d-flex justify-content-center">
                   <Button onClick={() => mostrarModal()} variant="black">
                     ¿Olvido su contraseña?
                   </Button>
-                </div>
-              </Card.Body>
-              <Card.Footer className="d-flex justify-content-center bg-white">
-                <Button className="mx-2" variant="secondary">
-                  Cancelar
-                </Button>
+                  <hr />
+                  <div className="">
+                    <Button className="mx-2" variant="secondary">
+                      Cancelar
+                    </Button>
 
-                <Button variant="info" style={{ color: "white" }}>
-                  Ingresar
-                </Button>
-              </Card.Footer>
+                    <Button
+                      type="submit"
+                      variant="info"
+                      style={{ color: "white" }}
+                    >
+                      Ingresar
+                    </Button>
+                  </div>
+                </Form>
+              </Card.Body>
             </Card>
           </Col>
           <Col lg={2}>
@@ -110,28 +134,35 @@ const LoginExample = () => {
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <form action="">
+              <Form onSubmit={enviarDatos}>
                 <ul>
                   <li>
                     <input
                       autoComplete="off"
                       type="text"
+                      name="email"
+                      onChange={handleInputChange}
                       className="inputStyle"
                       placeholder="Email"
                       style={{ width: "60%" }}
                     />
                   </li>
                 </ul>
-              </form>
+                <div className="d-flex justify-content-end">
+                  <Button
+                    type="submit"
+                    style={{ color: "white" }}
+                    variant="info"
+                    className="mx-2"
+                  >
+                    Aceptar
+                  </Button>
+                  <Button variant="secondary" onClick={cerrarModal}>
+                    Cerrar
+                  </Button>
+                </div>
+              </Form>
             </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={cerrarModal}>
-                Cerrar
-              </Button>
-              <Button style={{ color: "white" }} variant="info">
-                Aceptar
-              </Button>
-            </Modal.Footer>
           </Modal>
         )}
       </Container>
