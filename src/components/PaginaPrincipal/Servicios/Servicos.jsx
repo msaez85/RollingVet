@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardGroup, Button } from 'react-bootstrap';
 
 const Servicos = () => {
-  const [showMore, setShowMore] = useState(false);
+ 
 
   const serviciosData = [
     {
@@ -28,12 +28,9 @@ const Servicos = () => {
     },
   ];
 
-  useEffect(() => {
-    setShowMore(true);
-  }, []);
 
   return (
-    <div data-aos={showMore ? 'fade-up' : ''}>
+    <div data-aos='fade-up'>
       <div>
         <h3 style={{ textAlign: "center", marginTop: "1rem", color: "rgb(211, 98, 22)" }}>
           NUESTROS SERVICIOS

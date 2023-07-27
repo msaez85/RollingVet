@@ -26,9 +26,6 @@ const testimoniosData = [
 ];
 
 const Testimonios = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
 
   return (
     <>
