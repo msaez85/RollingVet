@@ -12,8 +12,8 @@ function Servicos() {
           NUESTROS SERVICIOS
         </h3>
       </div>
-      <CardGroup >
-        <Card>
+      <CardGroup className="card-group-principal">
+        <Card className="card-principal">
           <Card.Img
             variant="top"
             src="https://sumimascotas.com/wp-content/uploads/2023/05/7.-Que-es-una-peluqueria-canina-1.jpg"
@@ -25,8 +25,8 @@ function Servicos() {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card >
-          <Card.Img 
+        <Card className="card-principal">
+          <Card.Img className="imagen" 
             variant="top"
             src="https://www.clinicaveterinariaejea.com/wp-content/uploads/2014/05/clinica_veterinaria_ejea_073-1024x682.jpeg"
           />
@@ -37,7 +37,7 @@ function Servicos() {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card>
+        <Card className="card-principal">
           <Card.Img
             variant="top"
             src="https://www.sudoesteba.com/adjuntos/800/sudoba/2023/04/cloudfrontuseast1.images.arcpublishing-2.png"
@@ -49,7 +49,7 @@ function Servicos() {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card>
+        <Card className="card-principal">
           <Card.Img
             variant="top"
             src="https://1.bp.blogspot.com/-HrfjrldTqI0/YKGj4BEcuvI/AAAAAAAAKd4/61vZpkKOtw0epE6fGz_fLAv9PWdz-T7lQCLcBGAsYHQ/w1200-h630-p-k-no-nu/pet-shop-online.jpg"
