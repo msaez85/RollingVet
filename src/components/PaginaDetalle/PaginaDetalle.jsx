@@ -19,7 +19,7 @@ const planes = [
     precio: "$USD 199,99",
     descripcion:
       "Estamos aquí para cuidar a tu mascota de 5 a 10 años y atender sus necesidades básicas de salud. Nos enfocamos en la atención preventiva y de enfermedades menores. Todos los paquetes de vacunas incluyen un examen médico, diagnósticos relevantes y recomendaciones de tratamiento.",
-    imagen: "https://i.postimg.cc/JtjMFG0q/adulto.jpg",
+    imagen: "https://i.postimg.cc/BXgsqkxP/madurando.jpg",
     video: "https://www.youtube.com/embed/K42R1FG6oX4?start=7"
   },
   {
