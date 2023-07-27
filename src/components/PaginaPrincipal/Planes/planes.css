@@ -23,8 +23,9 @@
     margin: auto;
 }
 
-
-
+.plan-link{
+    color:white;
+}
 
 @media(max-width:630px) {
     .contenedor-principal Button{
