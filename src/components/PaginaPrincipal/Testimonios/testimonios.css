@@ -1,16 +1,24 @@
-.cartas{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 2rem 0.5rem;
+.card-testimonios{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-evenly !important;
+    gap: 1.5rem !important;
+    margin: 2rem 0.5rem !important;
+    padding: 0 !important;
+}
+
+.card-individuales{
+    padding: 0 !important;
+    flex: 1 1 !important;
 }
 
 
 
 
-@media(max-width:430px) {
-    .cartas{
-        flex-direction: column;
+
+@media(max-width:575px) {
+    .card-testimonios{
+        flex-direction: column !important;
     }
+    
 }
