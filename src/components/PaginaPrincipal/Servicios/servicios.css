@@ -4,8 +4,6 @@
     
 }
 
-
-
 .card-body{
     height:fit-content;
     text-align: center;
@@ -50,8 +48,12 @@ div>.card:hover{
     background-color: #138C91;
 }
 
-@media(max-width:570px) {
+@media(max-width:630px) {
     div>h3{
         font-size: 1.5rem;
     }
+    .card-group-principal{
+        flex-direction: column;
+    }
+    
 }

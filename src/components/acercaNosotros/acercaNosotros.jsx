@@ -44,7 +44,7 @@ const AcercaDeNosotros = () => {
       <h2>Nuestro team</h2>
       <div className="row justify-content-center">
         {personas.map((persona, index) => (
-          <div key={index} className="col-md-6 col-lg-4 col-sm-2">
+          <div key={index} className="col-md-6 col-lg-4 col-sm-4">
             <Card
               className="mx-2 my-2 animate__animated animate__fadeInUp"
               style={{ width: "100%" }}
