@@ -1,11 +1,11 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import PaginaPrincipal from "./components/PaginaPrincipal/PaginaPrincipal";
 import Contacto from "./components/contacto/contacto";
-import AboutUs from "./components/acercaNosotros/acercaNosotros";
 import Login from "./components/Login/Login";
 import AcercaDeNosotros from "./components/acercaNosotros/acercaNosotros";
+import PaginaDetalle from "./components/PaginaDetalle/PaginaDetalle";
 
 
 function App() {
@@ -15,9 +15,10 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<PaginaPrincipal />} />
-            <Route path="/acercaNosotros" element={<AcercaDeNosotros/>}/>
+            <Route path="/nosotros" element={<AcercaDeNosotros/>}/>
             <Route path="/contacto" element={<Contacto/>}/>
-            <Route path="/Login" element={<Login/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/planes/:id" element={<PaginaDetalle />}/>
           </Routes>
         </Layout>
       

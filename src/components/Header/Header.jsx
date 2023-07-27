@@ -19,11 +19,11 @@ function Header() {
                         style={{ maxHeight: "200px" }}
                         navbarScroll
                     >
-                        <Nav.Link  as={Link} to='/acercaNosotros'>Conocenos</Nav.Link>
+                        <Nav.Link  as={Link} to='/nosotros'>Conocenos</Nav.Link>
                         <Nav.Link  href="#action2">Servicios</Nav.Link>
                         <Nav.Link  href="#action3">Productos</Nav.Link>
                         <Nav.Link  as={Link} to='/contacto'>Contactanos</Nav.Link>
-                        <Nav.Link  as={Link} to='/Login'>Login</Nav.Link>
+                        <Nav.Link  as={Link} to='/login'>Login</Nav.Link>
                         
                     </Nav>
                 </Navbar.Collapse>
