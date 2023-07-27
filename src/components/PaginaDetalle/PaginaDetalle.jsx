@@ -7,26 +7,26 @@ const planes = [
   {
     id: 1,
     titulo: "Plan: primeros pasos",
-    precio: "$ 99,99",
+    precio: "$USD 99,99",
     descripcion:
       "Ofrecemos una asistencia completa y de calidad a tu mascota de 0 a 5 años. Nuestro principal objetivo es mantener su salud y su bienestar y ayudarlos a restablecerse cuando están enfermos. Para ello, contamos con un personal altamente cualificado e instalaciones modernas y bien equipadas.",
-    imagen: "../../assets/img/cachorro.jpg",
+    imagen: "https://i.postimg.cc/Xp3464y0/cachorro.jpg",
   },
   {
     id: 2,
     titulo: "Plan: madurando",
-    precio: "$ 199,99",
+    precio: "$USD 199,99",
     descripcion:
       "Estamos aquí para cuidar a tu mascota de 5 a 10 años y atender sus necesidades básicas de salud. Nos enfocamos en la atención preventiva y de enfermedades menores. Todos los paquetes de vacunas incluyen un examen médico, diagnósticos relevantes y recomendaciones de tratamiento.",
-    imagen: "../../assets/img/madurando.jpg",
+    imagen: "https://i.postimg.cc/JtjMFG0q/adulto.jpg",
   },
   {
     id: 3,
     titulo: "Plan: Adultos",
-    precio: "$ 299,99",
+    precio: "$USD 299,99",
     descripcion:
       "Contamos con servicios geriátricos los cuales recomendamos para mascotas a partir de los 10 años de edad, con ellos podemos detectar enfermedades antes de la presentación de los signos clínicos y comenzar una estrategia para que nuestros amigos tengan una vida más larga y de mejor calidad.",
-    imagen: "../../assets/img/adulto.jpg",
+    imagen: "https://i.postimg.cc/JtjMFG0q/adulto.jpg",
   },
 ];
 
@@ -45,7 +45,7 @@ const PaginaDetalle = () => {
           <div className="img-detalle">
             <img
               src={plan.imagen}
-              className="img-main img-fluid m-5"
+              className="img-main img-fluid"
               alt="detail"
             />
           </div>

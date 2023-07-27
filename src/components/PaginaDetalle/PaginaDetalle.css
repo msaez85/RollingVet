@@ -6,7 +6,6 @@
 
 .detalle{
     width: 70% !important;
-    margin-top:180px;
     background-color: rgb(225, 225, 225);
     display: flex;
     flex-direction: row;
@@ -21,12 +20,18 @@
     align-items: center !important; 
 }
 
+.img-detalle{
+    width: 60% !important;
+
+}
+
 .sinopsis{
     text-align: center !important;
 }
 
 .img-main{
     border-radius: 30px;
+    margin-bottom: 40px;
 }
 
 @media (max-width: 870px){
@@ -39,11 +44,11 @@
     }
 
     .descripcion-detalle{
-        width: 80% !important;
+        width: 60% !important;
     }
 
     .img-detalle{
-        width: 80% !important;
+        width: 60% !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
@@ -77,5 +82,9 @@
 
   .img-main{
       width: 90%;
+  }
+
+  .img-detalle{
+    width: 90% !important;
   }
 }
