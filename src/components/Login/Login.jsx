@@ -10,7 +10,7 @@ import Form from "react-bootstrap/Form";
 import "animate.css";
 import Button from "react-bootstrap/Button";
 
-const LoginExample = () => {
+const Login = () => {
   //HOOKS MODAL
   const [modal, setModal] = useState(false);
   const [datos, setDatos] = useState({
@@ -170,4 +170,4 @@ const LoginExample = () => {
   );
 };
 
-export default LoginExample;
+export default Login;
