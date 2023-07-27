@@ -11,6 +11,7 @@ const planes = [
     descripcion:
       "Ofrecemos una asistencia completa y de calidad a tu mascota de 0 a 5 años. Nuestro principal objetivo es mantener su salud y su bienestar y ayudarlos a restablecerse cuando están enfermos. Para ello, contamos con un personal altamente cualificado e instalaciones modernas y bien equipadas.",
     imagen: "https://i.postimg.cc/Xp3464y0/cachorro.jpg",
+    video: "https://www.youtube.com/embed/H4JE6XDR6UE",
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const planes = [
     descripcion:
       "Estamos aquí para cuidar a tu mascota de 5 a 10 años y atender sus necesidades básicas de salud. Nos enfocamos en la atención preventiva y de enfermedades menores. Todos los paquetes de vacunas incluyen un examen médico, diagnósticos relevantes y recomendaciones de tratamiento.",
     imagen: "https://i.postimg.cc/JtjMFG0q/adulto.jpg",
+    video: "https://www.youtube.com/embed/K42R1FG6oX4?start=7"
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ const planes = [
     descripcion:
       "Contamos con servicios geriátricos los cuales recomendamos para mascotas a partir de los 10 años de edad, con ellos podemos detectar enfermedades antes de la presentación de los signos clínicos y comenzar una estrategia para que nuestros amigos tengan una vida más larga y de mejor calidad.",
     imagen: "https://i.postimg.cc/JtjMFG0q/adulto.jpg",
+    video: "https://www.youtube.com/embed/4sVPBVhOAgU?start=7",
   },
 ];
 
@@ -60,6 +63,7 @@ const PaginaDetalle = () => {
               </div>
             </div>
             <p className="sinopsis">{plan.descripcion}</p>
+            <iframe className ="my-5" width="520" height="315" src={plan.video}></iframe>
           </div>
         </div>
       </main>

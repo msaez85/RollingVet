@@ -13,9 +13,9 @@ function Planes() {
             Si estabas buscando un plan de salud para tu perro y gato, RollingVet es tu
             mejor decisión ya que los cuidamos con la mejor cobertura de Tucuman.
           </h5>
-          <Button><Link to="/planes/1">Plan Cachorros</Link></Button>
-          <Button><Link to="/planes/2">Plan Madurando</Link></Button>
-          <Button><Link to="/planes/3">Plan Adultos</Link></Button>
+          <Button><Link className="plan-link" to="/planes/1">Plan Cachorros</Link></Button>
+          <Button><Link className="plan-link" to="/planes/2">Plan Madurando</Link></Button>
+          <Button><Link className="plan-link" to="/planes/3">Plan Adultos</Link></Button>
         </div>
         <div>
             <img src="https://planes.ikeargentina.com.ar/mascotasonline/images/landing_mascotas_online_b.png" alt="" />
