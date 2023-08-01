@@ -4,7 +4,7 @@
     
 }
 
-.card-body{
+.card-body-principal{
     height:fit-content;
     text-align: center;
     background-color: rgb(27, 26, 26);
@@ -12,7 +12,7 @@
     color: white;
 }
 
-div>.card:hover{
+.card-principal:hover{
     cursor: pointer;
     transform:scale(.9,.9);
     transition: all .2s;

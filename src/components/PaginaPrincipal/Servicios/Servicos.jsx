@@ -40,7 +40,7 @@ const Servicos = () => {
         {serviciosData.map((servicio, index) => (
           <Card className="card-principal" key={index}>
             <Card.Img variant="top" src={servicio.imageSrc} />
-            <Card.Body>
+            <Card.Body className="card-body-principal">
               <h4>{servicio.title}</h4>
               <Card.Text>
                 {servicio.description}
