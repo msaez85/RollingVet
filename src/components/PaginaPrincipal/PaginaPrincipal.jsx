@@ -9,9 +9,9 @@ const PaginaPrincipal = () => {
     <>
       <Slider />
       <hr />
-      <Servicios />
-      <hr />
       <Planes />
+      <hr />
+      <Servicios />
       <hr />
       <ProductosDestacados />
       <hr />

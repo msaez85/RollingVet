@@ -1,6 +1,6 @@
-.card-group{
+.card-group-principal{
     gap: 1rem;
-    margin: 2rem 1.5rem;
+    margin: 2rem 1.2rem;
     
 }
 
@@ -18,20 +18,11 @@ div>.card:hover{
     transition: all .2s;
 }
 
-.card-group img{
-    width: 100%;
-    height:50%;
-    margin: auto;
-}
-
-
 .ver{
     display: flex;
     justify-content: center;
     margin: 2rem 0rem;
 }
-
-
 
 .ver button{
     width: 40%;
@@ -40,12 +31,29 @@ div>.card:hover{
     
 }
 
+
+.card-principal{
+    border: none;
+    padding: 0rem !important;
+}
+
+.card-principal img{
+    border-radius: 0px;
+    width: 100%;
+    height:50%;
+    margin: auto;
+}
+
 .ver button:hover{
     background-color: #138C91;
 }
 
-@media(max-width:570px) {
+@media(max-width:630px) {
     div>h3{
         font-size: 1.5rem;
     }
+    .card-group-principal{
+        flex-direction: column;
+    }
+    
 }
