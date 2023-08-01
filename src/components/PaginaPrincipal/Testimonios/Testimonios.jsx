@@ -35,7 +35,7 @@ const Testimonios = () => {
           {testimoniosData.map((testimonio, index) => (
             <Card className="card-individuales text-center" key={index}>
               <Card.Header>{testimonio.name}</Card.Header>
-              <Card.Body>
+              <Card.Body className='card-body-testimonios'>
                 <Figure>
                   <Figure.Image
                     className='rounded-3'
