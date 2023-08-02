@@ -1,29 +1,29 @@
-import './App.css'
-import Header from './components/PaginaPrincipal/Header/Header'
-import Slider from './components/PaginaPrincipal/Slider/Slider'
-import Footer from './components/PaginaPrincipal/Footer/Footer'
-import Servicios from './components/PaginaPrincipal/Servicios/Servicos'
-
-
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
+import PaginaPrincipal from "./components/PaginaPrincipal/PaginaPrincipal";
+import Contacto from "./components/contacto/contacto";
+import Login from "./components/Login/Login";
+import AcercaDeNosotros from "./components/acercaNosotros/acercaNosotros";
+import PaginaDetalle from "./components/PaginaDetalle/PaginaDetalle";
 
 
 function App() {
   return (
     <>
-    <div className="principals">
-      <Header/>
-    </div>
-    <div className='slider'>
-      <Slider/>
-    </div>
-    <Servicios/>
-    <div>
-      <Footer/>
-    </div>
-
-
+      
+        <Layout>
+          <Routes>
+            <Route path="/" element={<PaginaPrincipal />} />
+            <Route path="/nosotros" element={<AcercaDeNosotros/>}/>
+            <Route path="/contacto" element={<Contacto/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/planes/:id" element={<PaginaDetalle />}/>
+          </Routes>
+        </Layout>
+      
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,70 +1,58 @@
 import "./servicios.css";
-import Card from "react-bootstrap/Card";
-import CardGroup from "react-bootstrap/CardGroup";
-import Button from "react-bootstrap/Button";
+import React, { useState, useEffect } from 'react';
+import { Card, CardGroup, Button } from 'react-bootstrap';
 
-function Servicos() {
+const Servicos = () => {
+ 
+
+  const serviciosData = [
+    {
+      title: 'Peluqueria',
+      imageSrc: 'https://sumimascotas.com/wp-content/uploads/2023/05/7.-Que-es-una-peluqueria-canina-1.jpg',
+      description: 'Con baño y corte de pelo de acuerdo a cada raza.',
+    },
+    {
+      title: 'Cirugias',
+      imageSrc: 'https://www.clinicaveterinariaejea.com/wp-content/uploads/2014/05/clinica_veterinaria_ejea_073-1024x682.jpeg',
+      description: 'Contamos con guardias, rayos X, ecografías y colocación de chips.',
+    },
+    {
+      title: 'Vacunacion',
+      imageSrc: 'https://www.sudoesteba.com/adjuntos/800/sudoba/2023/04/cloudfrontuseast1.images.arcpublishing-2.png',
+      description: 'Respetando el calendario de vacunación de cada animal.',
+    },
+    {
+      title: 'Pet Shop',
+      imageSrc: 'https://1.bp.blogspot.com/-HrfjrldTqI0/YKGj4BEcuvI/AAAAAAAAKd4/61vZpkKOtw0epE6fGz_fLAv9PWdz-T7lQCLcBGAsYHQ/w1200-h630-p-k-no-nu/pet-shop-online.jpg',
+      description: 'Los mejores productos para su mascota.',
+    },
+  ];
+
+
   return (
-    <>
-      <div data-aos="fade-up">
-        <h2 style={{ textAlign: "center", margin: "2rem", color: "black" }}>
+    <div data-aos='fade-up'>
+      <div>
+        <h3 style={{ textAlign: "center", marginTop: "1rem", color: "rgb(211, 98, 22)" }}>
           NUESTROS SERVICIOS
-        </h2>
+        </h3>
       </div>
-      <CardGroup data-aos="fade-up">
-        <Card>
-          <Card.Img
-            variant="top"
-            src="https://sumimascotas.com/wp-content/uploads/2023/05/7.-Que-es-una-peluqueria-canina-1.jpg"
-          />
-          <Card.Body>
-            <h4>Peluqueria</h4>
-            <Card.Text>
-              Con baño y corte de pelo deacuerdo a cada raza.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card>
-          <Card.Img
-            variant="top"
-            src="https://www.clinicaveterinariaejea.com/wp-content/uploads/2014/05/clinica_veterinaria_ejea_073-1024x682.jpeg"
-          />
-          <Card.Body>
-            <h4>Cirugias</h4>
-            <Card.Text>
-              Contamos con guardias,rayos X, ecografias y colocacion de chips.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card>
-          <Card.Img
-            variant="top"
-            src="https://www.sudoesteba.com/adjuntos/800/sudoba/2023/04/cloudfrontuseast1.images.arcpublishing-2.png"
-          />
-          <Card.Body>
-            <h4>Vacunacion</h4>
-            <Card.Text>
-              Respetando el calendario de vacunacion de cada animal.
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card>
-          <Card.Img
-            variant="top"
-            src="https://1.bp.blogspot.com/-HrfjrldTqI0/YKGj4BEcuvI/AAAAAAAAKd4/61vZpkKOtw0epE6fGz_fLAv9PWdz-T7lQCLcBGAsYHQ/w1200-h630-p-k-no-nu/pet-shop-online.jpg"
-          />
-          <Card.Body>
-            <h4>Pet Shop</h4>
-            <Card.Text>
-              Los mejores productos para su mascota
-            </Card.Text>
-          </Card.Body>
-        </Card>
+      <CardGroup className="card-group-principal">
+        {serviciosData.map((servicio, index) => (
+          <Card className="card-principal" key={index}>
+            <Card.Img variant="top" src={servicio.imageSrc} />
+            <Card.Body className="card-body-principal">
+              <h4>{servicio.title}</h4>
+              <Card.Text>
+                {servicio.description}
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        ))}
       </CardGroup>
       <div className="ver">
-        <Button variant="primary">Ver Mas</Button>{" "}
+        <Button variant="outline-success">Ver Más</Button>
       </div>
-    </>
+    </div>
   );
 }
 
