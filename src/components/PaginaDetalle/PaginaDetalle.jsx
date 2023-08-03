@@ -2,7 +2,7 @@ import React from "react";
 import "./PaginaDetalle.css";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Formulario from "./Formulario/formulario";
+import Formulario from "./Formulario/Formulario";
 
 const planes = [
   {
