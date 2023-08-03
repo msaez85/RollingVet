@@ -86,6 +86,10 @@
       align-items: center;
   }
 
+  .detalle-video{
+    width: 85% !important;
+  }
+
   .img-main{
       width: 70%;
       height: 70%;
