@@ -1,6 +1,6 @@
 
-img {
-    width: 10rem;
+.logo-nav img {
+    width: 12rem;
 }
 
 .nav-link:hover {
@@ -15,5 +15,6 @@ img {
     border-bottom: 18px solid #282540;
     width: 100%;
     background-color: rgb(255, 255, 255) !important;
+    font-size: 1.1rem;
 }
 
