@@ -1,0 +1,9 @@
+.masInfo-btn{
+    width: 170px !important;
+    height: 60px !important;
+}
+
+.masInfo-modal{
+    background-color: rgb(102, 99, 99)!important;
+    border-radius: 5px;
+}

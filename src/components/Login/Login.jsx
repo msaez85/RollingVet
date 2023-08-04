@@ -98,6 +98,7 @@ const Login = () => {
                   <Button onClick={() => mostrarModal()} variant="black">
                     ¿Olvido su contraseña?
                   </Button>
+                  <Button variant="black">Registrarse</Button>
                   <hr />
                   <div className="">
                     <Button className="mx-2" variant="secondary">
