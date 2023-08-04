@@ -1,12 +1,10 @@
 import React, { useState,} from "react";
 import { useNavigate } from "react-router-dom";
 import { MdAccountCircle, MdMailOutline, MdKey ,MdVisibility ,MdVisibilityOff} from "react-icons/md";
-import { FaEye, FaEyeSlash } from "react-icons/fa"
 
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
-
 
 import "./registro.css";
 
@@ -36,6 +34,9 @@ const Registro = () => {
     });
   };
 
+  console.log(Object.values(resp))
+
+
 //funcion para validar mail y passwords
   const handleSumbit = (e) => {
     e.preventDefault();
@@ -52,11 +53,6 @@ const Registro = () => {
 
     setResp(value);
     setShowModal(true);
-    clearForm();
-  };
-
-//funcion para limpiar formulario (el e.target.reset no me funcionaba)
-  const clearForm = () => {
     setValue({
       usuario: "",
       email: "",
@@ -67,9 +63,10 @@ const Registro = () => {
     setPasswordError("");
   };
 
+
 //validacion de mail mediante expresiones regulares
   const validateEmail = (email) => {
-    const re = /\S+@\S+\.\S+/;
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   };
 
@@ -79,7 +76,7 @@ const Registro = () => {
     <>
       <h3 style={{ textAlign: "center", marginTop: "2rem" }}>Registro</h3>
 
-      <Form onSubmit={handleSumbit} className="registro-usuario">
+      <Form data-aos='fade-up' onSubmit={handleSumbit} className="registro-usuario">
         <div className="img-registro d-flex justify-content-center align-items-center">
             <img src="https://img.icons8.com/?size=512&id=124077&format=png" alt="imagenregistro" 
             style={{ width: "120px", height: "120px" }}/>
@@ -97,6 +94,7 @@ const Registro = () => {
               id="usuario"
               value={value.usuario}
               onChange={handleChange}
+              placeholder="Ingresa aca el usuario compadre"
             />
           </div>
         </Form.Group>
@@ -112,6 +110,7 @@ const Registro = () => {
               id="email"
               value={value.email}
               onChange={handleChange}
+              placeholder="ingresa aca el  mail chango"
             />
           </div>
           <Form.Text className="text-danger">{emailError}</Form.Text>
@@ -173,7 +172,8 @@ const Registro = () => {
         </Button>
       </Form>
 {/* modal con funcion para redigir a login */}
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
+      <Modal show={showModal} onHide={() => setShowModal(false)} backdrop="static"
+        keyboard={false}>
         <Modal.Header>
           <Modal.Title>Registro Exitoso</Modal.Title>
         </Modal.Header>
@@ -193,7 +193,7 @@ const Registro = () => {
         </Modal.Footer>
       </Modal>
 
-      <h3>{Object.values(resp)}</h3>
+      
     </>
   );
 };
