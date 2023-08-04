@@ -86,6 +86,7 @@ const Registro = () => {
           <div className="input-registro">
             <MdAccountCircle />
             <Form.Control
+            placeholder="MiUsuario..."
             minLength={4}
             maxLength={20}
               required
@@ -94,7 +95,7 @@ const Registro = () => {
               id="usuario"
               value={value.usuario}
               onChange={handleChange}
-              placeholder="Ingresa aca el usuario compadre"
+              
             />
           </div>
         </Form.Group>
@@ -105,12 +106,13 @@ const Registro = () => {
             <MdMailOutline />
             <Form.Control
               required
+              placeholder="MiCorreo@...."
               type="email"
               name="email"
               id="email"
               value={value.email}
               onChange={handleChange}
-              placeholder="ingresa aca el  mail chango"
+              
             />
           </div>
           <Form.Text className="text-danger">{emailError}</Form.Text>
@@ -122,6 +124,7 @@ const Registro = () => {
             <MdKey />
             <Form.Control
               required
+              placeholder="*******"
               type={showPassword1 ? "text" : "password"}
               name="password1"
               id="password1"
@@ -142,6 +145,7 @@ const Registro = () => {
           <div className="input-registro">
             <MdKey />
             <Form.Control
+              placeholder="*******"
               required
               type={showPassword2 ? "text" : "password"}
               name="password2"
