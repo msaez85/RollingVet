@@ -46,7 +46,7 @@ const ProductosDestacados = () => {
         </div>
          
           <div className="tienda">
-            <Button variant="outline-success">Ir a Tienda</Button>
+            <Button href="/productos" variant="outline-success">Ir a Tienda</Button>
           </div>
         
       </div>

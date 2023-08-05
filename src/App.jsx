@@ -7,6 +7,7 @@ import Login from "./components/Login/Login";
 import AcercaDeNosotros from "./components/acercaNosotros/acercaNosotros";
 import PaginaDetalle from "./components/PaginaDetalle/PaginaDetalle";
 import PaginaProductos from "./components/PaginaProductos/PaginaProductos";
+import Registro from "./components/Registro/Registro";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/planes/:id" element={<PaginaDetalle />} />
           <Route path="/productos" element={<PaginaProductos />} />
+          <Route path="/registro" element={<Registro/>}/>
         </Routes>
       </Layout>
     </>
