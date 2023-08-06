@@ -5,7 +5,7 @@ export const productos = [
     descripcion:
       "Royal Canin Mini Junior es un alimento para cachorros de raza pequeña hasta los 10 meses de edad. Su croqueta que se adapta a la forma y tamaño de los dientes de los perros de raza pequeña, contiene una combinación exclusiva de nutrientes para el mantenimiento de la salud digestiva, del equilibrio de la flora intestinal y con ello mejora la calidad de las heces. ",
     img: "https://mundomascotashop.com.ar/wp-content/uploads/2021/09/3oldprince-434x540.png",
-    precio: "$1700",
+    precio: "$7999",
   },
   {
     id: "2",
@@ -13,7 +13,7 @@ export const productos = [
       "Royal Canin Mini Junior es un alimento para cachorros de raza pequeña hasta los 10 meses de edad. Su croqueta que se adapta a la forma y tamaño de los dientes de los perros de raza pequeña, contiene una combinación exclusiva de nutrientes para el mantenimiento de la salud digestiva, del equilibrio de la flora intestinal y con ello mejora la calidad de las heces. ",
     nombre: "Alimento Old Prince Adult Small Breeds X3KG",
     img: "https://mundomascotashop.com.ar/wp-content/uploads/2021/09/2oldprince-434x540.png",
-    precio: "$1900",
+    precio: "$2999",
   },
   {
     id: "3",
@@ -21,7 +21,7 @@ export const productos = [
       "Royal Canin Mini Junior es un alimento para cachorros de raza pequeña hasta los 10 meses de edad. Su croqueta que se adapta a la forma y tamaño de los dientes de los perros de raza pequeña, contiene una combinación exclusiva de nutrientes para el mantenimiento de la salud digestiva, del equilibrio de la flora intestinal y con ello mejora la calidad de las heces. ",
     nombre: "Old Prince Puppy All Breeds X3KG",
     img: "https://mundomascotashop.com.ar/wp-content/uploads/2021/09/1oldprince-434x540.png",
-    precio: "$1900",
+    precio: "$1799",
   },
   {
     id: "4",

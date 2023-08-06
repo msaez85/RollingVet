@@ -7,14 +7,12 @@ import Modal from "react-bootstrap/Modal";
 const Catalogo = () => {
   const [show, setShow] = useState(false);
   const [datos, setDatos] = useState({});
-  const mostrarModal = () => {
-    setShow(true);
-  };
 
   const handleClose = () => setShow(false);
 
   const obtenerDatos = (producto) => {
     setDatos(producto);
+    setShow(true);
   };
   return (
     <>
@@ -23,9 +21,10 @@ const Catalogo = () => {
           return (
             <div key={index} className=" p-2 col-sm-12  col-md-6 col-lg-3">
               <Card
+                data-aos="fade-up"
                 key={producto.id}
-                className="border-3 classCard"
-                style={{ width: "280px", height: "550px" }}
+                className="border-3 classCard "
+                style={{ width: "280px", height: "450px" }}
                 onClick={() => obtenerDatos(producto)}
               >
                 <Card.Img variant="top" src={producto.img} alt="prodImagen" />
@@ -35,13 +34,6 @@ const Catalogo = () => {
                     Precio: {producto.precio}
                   </Card.Text>
                 </Card.Body>
-                <button
-                  className="btn"
-                  style={{ backgroundColor: "#2695B0", color: "white" }}
-                  onClick={mostrarModal}
-                >
-                  Ver detalles
-                </button>
               </Card>
             </div>
           );
