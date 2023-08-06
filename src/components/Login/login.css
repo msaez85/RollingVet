@@ -11,10 +11,6 @@ ul {
     display: none;
   }
 
-  .containerForm {
-    padding: 0%;
-  }
-
   .inputStyle {
     margin-right: 200px;
   }
@@ -46,10 +42,15 @@ ul {
   outline: none;
   box-shadow: 0 4px 2px -2px #9dc7d1;
 }
-
+.headerClass {
+  background: none;
+}
 .containerForm2 {
+  margin-right: 20px;
   width: 280px;
-  height: 320px;
+  border-radius: 3px;
+  margin-top: 16px;
+  height: 400px;
   background-image: url("https://img.myloview.com/stickers/cute-gray-tabby-cat-on-light-blue-background-space-for-text-lovely-pet-700-171761167.jpg");
   background-repeat: no-repeat;
   background-size: cover;

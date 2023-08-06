@@ -8,7 +8,7 @@ const PaginaProductos = () => {
       <div className="p-2">
         <Container
           fluid
-          className="d-flex justify-content-center banner p-2"
+          className="d-flex justify-content-center banner "
         ></Container>
       </div>
       <CarrousellProductos />

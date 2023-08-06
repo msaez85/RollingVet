@@ -1,14 +1,14 @@
 export const banners = [
   {
-    img: "https://advantagesmollan.com/wp-content/uploads/2021/10/Royal-Canine-header.png",
+    img: "https://www.petfoodprocessing.net/ext/resources/PFP-Images/Articles-20/031721_Royan_Canin-Lebanon_exp_Lead.jpg?height=667&t=1615989843&width=1080",
     text1: "Royal Canin, la mejor alimentacion para tu amigo!",
   },
   {
-    img: "https://www.hipermania.com.ar/imgs/mcat/mcat-banner-perros-alimento.png?v=8",
-    text1: "RollingVet! La mejor veterinaria para tu mascota",
+    img: "https://www.justdogsstore.com/wp-content/uploads/2022/11/pedigree_brandstore_banner.webp",
+    text1: "Mantené a tu mascota sana y feliz con pedigree",
   },
   {
-    img: "https://www.hillspet.co/content/dam/cp-sites/hills/hills-pet/global/2020-homepage-redesign/new-banner-homepage-hp-packshot.png",
-    text1: "Con hills, alimentación de tu perro esta segura",
+    img: "https://i1.adis.ws/i/petsathome/dt-hills-header-banner",
+    text1: "Con hills, la alimentación de tu mascota esta segura",
   },
 ];

@@ -37,14 +37,14 @@ const Login = () => {
     <>
       <Container
         style={{ width: "100%" }}
-        className="d-flex justify-content-center p-5"
+        className="d-flex justify-content-center p-5 "
         fluid
       >
         <Row>
           <Col xs={12} sm={12} md={12} lg={10}>
             <Card style={{ width: "100%", overflow: "hidden" }}>
               <Card.Header
-                className="bg-white d-flex justify-content-center align-items-center"
+                className="headerClass d-flex justify-content-center align-items-center"
                 style={{ fontSize: "20px" }}
               >
                 {" "}
@@ -69,7 +69,7 @@ const Login = () => {
                       <input
                         placeholder="Email"
                         name="email"
-                        className="inputStyle"
+                        className="inputStyle headerClass"
                         type="text"
                         required
                         autoComplete="off"
@@ -86,7 +86,7 @@ const Login = () => {
                       />
 
                       <input
-                        className="inputStyle"
+                        className="inputStyle headerClass"
                         type="password"
                         name="contra"
                         placeholder="Contraseña"
@@ -98,7 +98,9 @@ const Login = () => {
                   <Button onClick={() => mostrarModal()} variant="black">
                     ¿Olvido su contraseña?
                   </Button>
-                  <Button href="/registro" variant="black">Registrarse</Button>
+                  <Button href="/registro" variant="black">
+                    Registrarse
+                  </Button>
                   <hr />
                   <div className="">
                     <Button className="mx-2" variant="secondary">

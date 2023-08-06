@@ -4,3 +4,7 @@
   color: gray;
   font-family: "Montserrat", sans-serif;
 }
+
+.classCard:hover {
+  border-color: #2796b1;
+}
