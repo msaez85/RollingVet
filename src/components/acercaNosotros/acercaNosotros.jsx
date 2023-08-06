@@ -6,8 +6,8 @@ import "./acercaNosotros.css";
 const personas = [
   {
     nombre: "Mario Saez",
-    descripcion: "Breve descripción de Mario Saez",
-    fotoURL: "https://via.placeholder.com/150",
+    descripcion: "38 años, Ing. en Computacion. Software Engineer en SOVOS. Me gusta la Salsa/bachata, viajar y conocer gente nueva.",
+    fotoURL: "https://i.postimg.cc/WbjYQ3N6/mario.jpg",
     
   },
   {
@@ -49,7 +49,7 @@ const AcercaDeNosotros = () => {
               className="mx-2 my-2 animate__animated animate__fadeInUp"
               style={{ width: "100%" }}
             >
-              <Card.Img variant="top" src={persona.fotoURL} alt={persona.nombre} />
+              <Card.Img className="nosotros-image" variant="top" src={persona.fotoURL} alt={persona.nombre} />
               <Card.Body>
                 <Card.Title>{persona.nombre}</Card.Title>
                 <Card.Text>{persona.descripcion}</Card.Text>
