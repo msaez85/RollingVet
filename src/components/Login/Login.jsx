@@ -15,7 +15,7 @@ const Login = () => {
   const [modal, setModal] = useState(false);
   const [datos, setDatos] = useState({
     email: "",
-    contra: "",
+    password: "",
   });
 
   const handleInputChange = (e) => {
@@ -30,7 +30,6 @@ const Login = () => {
 
   const enviarDatos = (e) => {
     e.preventDefault();
-    console.log("DATOS ENVIADOS: " + datos.email + " " + datos.contra);
   };
 
   return (
