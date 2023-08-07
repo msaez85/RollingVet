@@ -9,6 +9,7 @@ import PaginaDetalle from "./components/PaginaDetalle/PaginaDetalle";
 import PaginaProductos from "./components/PaginaProductos/PaginaProductos";
 import Registro from "./components/Registro/Registro";
 import TablaPacientes from "./components/Pacientes/TablaPacientes";
+import TablaTurnos from "./components/Turnos/TablaTurnos";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/productos" element={<PaginaProductos />} />
           <Route path="/registro" element={<Registro/>}/>
           <Route path="/pacientes" element={<TablaPacientes/>}/>
+          <Route path="/turnos" element={<TablaTurnos/>}/>
         </Routes>
       </Layout>
     </>
