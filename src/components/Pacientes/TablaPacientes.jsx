@@ -27,7 +27,7 @@ const mascotasInicial = [
     ownerName: "Jose Perez",
     email: "jose@mail.com",
     phone: "123-456-7890",
-    name: "pacho",
+    name: "pancho",
     race: "Salchicha",
     species: "perro",
   },

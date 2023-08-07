@@ -1,0 +1,6 @@
+.tabla-turnos-btn-agregar{
+    width: 100%;    
+    display: flex;
+    justify-content: end;
+    padding-right: 25px;
+}
