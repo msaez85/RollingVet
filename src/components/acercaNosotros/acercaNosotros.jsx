@@ -8,33 +8,21 @@ const personas = [
     nombre: "Mario Saez",
     descripcion: "38 años, Ing. en Computacion. Software Engineer en SOVOS. Me gusta la Salsa/bachata, viajar y conocer gente nueva.",
     fotoURL: "https://i.postimg.cc/WbjYQ3N6/mario.jpg",
-    
-  },
-  {
-    nombre: "Sebastian Luna",
-    descripcion: "Breve descripción de Sebastián Luna",
-    fotoURL: "https://via.placeholder.com/150",
-    
   },
   {
     nombre: "Rodrigo Contreras",
     descripcion: "Breve descripción de Rodrigo Contreras",
     fotoURL: "https://via.placeholder.com/150",
-     
-
   },
   {
     nombre: "Nicolás Agüero",
     descripcion: "Breve descripción de Nicolás Agüero", 
     fotoURL: "https://via.placeholder.com/150",
-     
-
   },
   {
     nombre: "Luciano Durán",
     descripcion: "Breve descripción de Luciano Durán",
     fotoURL: "https://via.placeholder.com/150", 
-
   },
 ];
 
