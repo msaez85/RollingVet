@@ -10,7 +10,7 @@ import PaginaProductos from "./components/PaginaProductos/PaginaProductos";
 import Registro from "./components/Registro/Registro";
 import TablaPacientes from "./components/Pacientes/TablaPacientes";
 import TablaTurnos from "./components/Turnos/TablaTurnos";
-
+import Pagina404 from "./components/Pagina404/Pagina404";
 function App() {
   return (
     <>
@@ -22,9 +22,10 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/planes/:id" element={<PaginaDetalle />} />
           <Route path="/productos" element={<PaginaProductos />} />
-          <Route path="/registro" element={<Registro/>}/>
-          <Route path="/pacientes" element={<TablaPacientes/>}/>
-          <Route path="/turnos" element={<TablaTurnos/>}/>
+          <Route path="/registro" element={<Registro />} />
+          <Route path="/pacientes" element={<TablaPacientes />} />
+          <Route path="/turnos" element={<TablaTurnos />} />
+          <Route path="/404" element={<Pagina404 />} />
         </Routes>
       </Layout>
     </>
