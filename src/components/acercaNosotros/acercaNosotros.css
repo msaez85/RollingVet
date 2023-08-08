@@ -1,0 +1,90 @@
+/* #root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  } */
+  
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+
+  .nosotros-image{
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  @keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear;
+    }
+  }
+  
+  .card {
+    padding: 2em;
+  }
+  
+  .read-the-docs {
+    color: #888;
+  }
+  
+  .container {
+    padding: 2rem;
+    
+  }
+  
+  /* Estilos para cada card */
+  .card {
+    /* flex: 0 0 calc(50% - 2rem); Ancho flexible para cada card y espacio entre ellas */
+    margin: 1rem;
+    text-align: center;
+    background-color: #f8f9fa; /* Color de fondo para las cards */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Sombra para las cards */
+    border-radius: 0.5rem; /* Bordes redondeados para las cards */
+    width: auto;
+    color: black;
+  }
+  .row {
+    margin: 0 -1rem;
+    padding: 2em;
+  }
+  /* Estilos para las imágenes dentro de las cards */
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem; /* Bordes redondeados para las imágenes */
+  }
+  
+  /* Estilos para los títulos y descripciones de las cards */
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem; /* Espacio inferior para el título */
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  
+  /* Estilos de animación de "animate.css" */
+  .animate__animated {
+    animation-duration: 1s;
+  }

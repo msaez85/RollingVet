@@ -1,0 +1,46 @@
+
+.carousel-indicators {
+    background-color: rgba(133, 3, 3, 0) !important;
+}
+
+.carousel-control-next-icon {
+    background-color: rgba(31, 32, 32, 0.404);
+}
+
+.carousel-caption {
+    background-color: rgba(57, 59, 59, 0.404);
+    margin-bottom: 2rem;
+}
+
+.carousel-control-prev-icon {
+    background-color: rgba(31, 32, 32, 0.404);
+}
+
+
+
+.d-block {
+    height:84vh;
+    width: 100% !important;
+    margin-bottom: 0rem;
+    border-bottom: 5px solid #0D1348;
+    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.63);
+    webkit-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.63);
+}
+
+@media(max-width:700px) {
+    .d-block {
+        height: 20rem;
+    }
+}
+
+@media(max-width:420px) {
+    .d-block {
+        height: 40vh;
+    }
+
+
+    h3 {
+        font-size: 0.9rem;
+    }
+}

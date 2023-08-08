@@ -1,0 +1,59 @@
+a:link {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+@media (max-width: 950px) {
+  .icon {
+    display: none;
+  }
+
+  .inputStyle {
+    margin-right: 200px;
+  }
+
+  .cardPrueba {
+    width: 100%;
+  }
+
+  .containerForm2 {
+    display: none;
+  }
+}
+
+.inputStyle {
+  width: 90%;
+  color: black;
+  font-size: 15px;
+  background-color: white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: #9dc7d1;
+  outline: none;
+}
+
+.inputStyle:focus {
+  animation: pulse;
+  animation-duration: 1s;
+  outline: none;
+  box-shadow: 0 4px 2px -2px #9dc7d1;
+}
+.headerClass {
+  background: none;
+}
+.containerForm2 {
+  margin-right: 20px;
+  width: 280px;
+  border-radius: 3px;
+  margin-top: 16px;
+  height: 400px;
+  background-image: url("https://img.myloview.com/stickers/cute-gray-tabby-cat-on-light-blue-background-space-for-text-lovely-pet-700-171761167.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-right: 20px;
+}
