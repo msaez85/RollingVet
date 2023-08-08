@@ -90,50 +90,52 @@ const TablaTurnos = () => {
 
   return (
     <>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>Nombre del dueño</th>
-            <th>Mascota</th>
-            <th>Veterinario</th>
-            <th>Fecha</th>
-            <th>Hora</th>
-            <th>Detalle</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          {turnos.map((turno, index) => (
-            <tr key={index}>
-              <td>{turno.ownerName}</td>
-              <td>{turno.name}</td>
-              <td>{turno.vet}</td>
-              <td>{turno.date}</td>
-              <td>{turno.time}</td>
-              <td>{turno.detail}</td>
-              <td>
-                <Button
-                  className="m-1"
-                  variant="success"
-                  onClick={() => {
-                    setTurnoSeleccionado(turno);
-                    setShowEditModal(true);
-                  }}
-                >
-                  <FontAwesomeIcon icon={faPencilAlt} className="me-2" />
-                </Button>
-                <Button
-                  className="mx-1 tabla-paciente-btn"
-                  variant="danger"
-                  onClick={() => handleDelete(turno)}
-                >
-                  <FontAwesomeIcon icon={faTrash} className="me-2" />
-                </Button>
-              </td>
+      <article className="row my-2 d-flex justify-content-center table-responsive">
+        <Table striped bordered hover className="text-center">
+          <thead>
+            <tr>
+              <th>Nombre del dueño</th>
+              <th>Mascota</th>
+              <th>Veterinario</th>
+              <th>Fecha</th>
+              <th>Hora</th>
+              <th>Detalle</th>
+              <th>Acciones</th>
             </tr>
-          ))}
-        </tbody>
-      </Table>
+          </thead>
+          <tbody>
+            {turnos.map((turno, index) => (
+              <tr key={index}>
+                <td>{turno.ownerName}</td>
+                <td>{turno.name}</td>
+                <td>{turno.vet}</td>
+                <td>{turno.date}</td>
+                <td>{turno.time}</td>
+                <td>{turno.detail}</td>
+                <td>
+                  <Button
+                    className="m-1"
+                    variant="success"
+                    onClick={() => {
+                      setTurnoSeleccionado(turno);
+                      setShowEditModal(true);
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faPencilAlt} className="me-2" />
+                  </Button>
+                  <Button
+                    className="mx-1 tabla-paciente-btn"
+                    variant="danger"
+                    onClick={() => handleDelete(turno)}
+                  >
+                    <FontAwesomeIcon icon={faTrash} className="me-2" />
+                  </Button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+      </article>
       <div className="tabla-turnos-btn-agregar">
         <Button
           className="btn btn-dark mx-2 my-3"
