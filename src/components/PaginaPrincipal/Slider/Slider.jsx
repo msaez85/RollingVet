@@ -8,8 +8,8 @@ import "./slider.css"
 
 function Slider() {
   return (
-    <Carousel data-aos="fade-up">
-      <Carousel.Item >
+    <Carousel fade data-aos="fade-up">
+      <Carousel.Item interval={2800}>
         <img
           className="d-block w-100 rounded-1"
           src={gato}
@@ -20,7 +20,7 @@ function Slider() {
           
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item interval={2800}>
         <img
           className="d-block w-100 rounded-1"
           src={perro1}
@@ -31,7 +31,7 @@ function Slider() {
           <h3>Urgencias las 24 HS</h3>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item interval={2800}>
         <img
           className="d-block w-100 rounded-1"
           src={slider1}
@@ -42,7 +42,7 @@ function Slider() {
           <h3>Su mejor amigo , en las mejores manos</h3>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item interval={2800}>
         <img
           className="d-block w-100 rounded-1"
           src={slider1}
