@@ -1,0 +1,6 @@
+.administracion-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin:15px 40px;
+}

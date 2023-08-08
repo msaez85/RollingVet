@@ -92,50 +92,52 @@ const TablaPacientes = () => {
 
   return (
     <div className="paciente-tabla">
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>Nombre del dueño</th>
-            <th>Email</th>
-            <th>Telefono</th>
-            <th>Mascota</th>
-            <th>Raza</th>
-            <th>Especie</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          {mascotas.map((mascota) => (
-            <tr key={mascota.email}>
-              <td>{mascota.ownerName}</td>
-              <td>{mascota.email}</td>
-              <td>{mascota.phone}</td>
-              <td>{mascota.name}</td>
-              <td>{mascota.race}</td>
-              <td>{mascota.species}</td>
-              <td>
-                <Button
-                  className="m-1"
-                  variant="success"
-                  onClick={() => {
-                    setMascotaSeleccionada(mascota);
-                    setShowEditModal(true);
-                  }}
-                >
-                  <FontAwesomeIcon icon={faPencilAlt} className="me-2" />
-                </Button>
-                <Button
-                  className="mx-1 tabla-paciente-btn"
-                  variant="danger"
-                  onClick={() => handleDelete(mascota)}
-                >
-                  <FontAwesomeIcon icon={faTrash} className="me-2" />
-                </Button>
-              </td>
+      <article className="row my-2 d-flex justify-content-center table-responsive">
+        <Table striped bordered hover className="text-center">
+          <thead>
+            <tr>
+              <th>Nombre del dueño</th>
+              <th>Email</th>
+              <th>Telefono</th>
+              <th>Mascota</th>
+              <th>Raza</th>
+              <th>Especie</th>
+              <th>Acciones</th>
             </tr>
-          ))}
-        </tbody>
-      </Table>
+          </thead>
+          <tbody>
+            {mascotas.map((mascota) => (
+              <tr key={mascota.email}>
+                <td>{mascota.ownerName}</td>
+                <td>{mascota.email}</td>
+                <td>{mascota.phone}</td>
+                <td>{mascota.name}</td>
+                <td>{mascota.race}</td>
+                <td>{mascota.species}</td>
+                <td>
+                  <Button
+                    className="m-1"
+                    variant="success"
+                    onClick={() => {
+                      setMascotaSeleccionada(mascota);
+                      setShowEditModal(true);
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faPencilAlt} className="me-2" />
+                  </Button>
+                  <Button
+                    className="mx-1 tabla-paciente-btn"
+                    variant="danger"
+                    onClick={() => handleDelete(mascota)}
+                  >
+                    <FontAwesomeIcon icon={faTrash} className="me-2" />
+                  </Button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+      </article>
       <div className="tabla-pacientes-btn-agregar">
         <Button
           className="btn btn-dark mx-2 my-3"
