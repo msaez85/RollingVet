@@ -12,7 +12,7 @@ const PaginaProductos = () => {
         ></Container>
       </div>
       <CarrousellProductos />
-      <div data-aos="zoom-in">
+      <div data-aos="zoom-in" data-aos-once="true">
         <h2 className="text-center p-2">Otros productos interesantes</h2>
       </div>
 
