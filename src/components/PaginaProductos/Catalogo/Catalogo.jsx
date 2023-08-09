@@ -22,6 +22,7 @@ const Catalogo = () => {
             <div key={index} className=" p-2 col-sm-12  col-md-6 col-lg-3">
               <Card
                 data-aos="fade-up"
+                data-aos-once="true"
                 key={producto.id}
                 className="border-3 classCard "
                 style={{ width: "280px", height: "450px" }}
