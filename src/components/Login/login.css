@@ -19,7 +19,7 @@ ul {
     width: 100%;
   }
 
-  .containerForm2 {
+  .containerImg {
     display: none;
   }
 }
@@ -28,7 +28,7 @@ ul {
   width: 90%;
   color: black;
   font-size: 15px;
-  background-color: white;
+  background-color: transparent;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -42,11 +42,12 @@ ul {
   outline: none;
   box-shadow: 0 4px 2px -2px #9dc7d1;
 }
-.headerClass {
+
+.classHeader {
   background: none;
 }
-.containerForm2 {
-  margin-right: 20px;
+
+.containerImg {
   width: 280px;
   border-radius: 3px;
   margin-top: 16px;
@@ -55,5 +56,8 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin-right: 20px;
+}
+
+.icon {
+  margin-right: 12px;
 }
