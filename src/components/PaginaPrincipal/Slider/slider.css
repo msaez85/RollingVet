@@ -19,7 +19,7 @@
 
 
 .d-block {
-    height:84vh;
+    height:70vh;
     width: 100% !important;
     margin-bottom: 0rem;
     border-bottom: 5px solid #0D1348;
@@ -36,11 +36,15 @@
 
 @media(max-width:420px) {
     .d-block {
-        height: 40vh;
+        height: 32vh;
     }
 
-
-    h3 {
-        font-size: 0.9rem;
+    .carousel-control-prev-icon{
+        display: none;
     }
+
+    .carousel-control-next-icon {
+        display: none;
+    }
+
 }

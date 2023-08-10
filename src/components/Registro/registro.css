@@ -10,6 +10,27 @@
     -moz-box-shadow: 0px 0px 13px -3px rgba(0,0,0,0.75);
 }
 
+.boton-submit{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.boton-submit Button{
+    background-color: #138C91;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.boton-modal-registro{
+    background-color: #138C91;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+
+
+
 .input-registro{
     display: flex;
     flex: row;

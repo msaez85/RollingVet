@@ -21,10 +21,10 @@
     justify-content: center;
 }
 
-.tienda Button{
-    width: 30%;
+.tienda a{
+    width: 40%;
+    border:solid 2px #138C91;
     border-radius: 12px;
-    border-color: #138C91;
 }
 
 .tienda Button:hover{

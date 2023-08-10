@@ -8,51 +8,48 @@ import "./slider.css"
 
 function Slider() {
   return (
-    <Carousel data-aos="fade-up">
-      <Carousel.Item >
+    <Carousel fade data-aos="fade-up">
+      <Carousel.Item interval={2800}>
         <img
           className="d-block w-100 rounded-1"
-          src={gato}
+          src="https://i.postimg.cc/fb3vrvB2/rollingvtv2.png"
           alt="First slide"
         />
-        <Carousel.Caption>
-          <h3>Atencion Personalizada</h3>
-          
-        </Carousel.Caption>
+  
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item interval={2800}>
         <img
           className="d-block w-100 rounded-1"
-          src={perro1}
+          src="https://i.postimg.cc/KvHkHhwb/rollvt3.png"
           alt="Second slide"
         />
 
-        <Carousel.Caption>
-          <h3>Urgencias las 24 HS</h3>
-        </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item interval={2800}>
         <img
           className="d-block w-100 rounded-1"
-          src={slider1}
+          src="https://i.postimg.cc/zBpKrG0t/rollingvet2.png"
           alt="Third slide"
         />
 
-        <Carousel.Caption>
-          <h3>Su mejor amigo , en las mejores manos</h3>
-        </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item interval={2800}>
         <img
           className="d-block w-100 rounded-1"
-          src={slider1}
+          src="https://i.postimg.cc/Z5118TPM/ROLLINGVET3.png"
           alt="Third slide"
         />
-
-        <Carousel.Caption>
-          <h3>Su mejor amigo , en las mejores manos</h3>
-        </Carousel.Caption>
       </Carousel.Item>
+
+      <Carousel.Item interval={2800}>
+        <img
+          className="d-block w-100 rounded-1"
+          src="https://i.postimg.cc/mZv6FjQy/rollingvet4.png"
+          alt="Third slide"
+        />
+      </Carousel.Item>
+
+      
     </Carousel>
   );
 }

@@ -74,9 +74,10 @@ const Registro = () => {
 
   return (
     <>
-      <h3 style={{ textAlign: "center", marginTop: "2rem" }}>Registro</h3>
+      
 
       <Form data-aos='fade-up' onSubmit={handleSumbit} className="registro-usuario">
+        <h3 style={{ textAlign: "center", marginTop: "2rem" }}>Registro</h3>
         <div className="img-registro d-flex justify-content-center align-items-center">
             <img src="https://img.icons8.com/?size=512&id=124077&format=png" alt="imagenregistro" 
             style={{ width: "120px", height: "120px" }}/>
@@ -167,13 +168,17 @@ const Registro = () => {
           <Form.Check
             required
             type="checkbox"
-            label="Acepto terminos y condiciones"
+            label={<a href="">Acepto terminos y condiciones</a>}
+            
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <div className="boton-submit" >
+          <Button variant="primary" type="submit">
           Registrarse
         </Button>
+        </div>
+        
       </Form>
 {/* modal con funcion para redigir a login */}
       <Modal show={showModal} onHide={() => setShowModal(false)} backdrop="static"
@@ -185,7 +190,7 @@ const Registro = () => {
           Su usuario fue guardado exitosamente , presione Iniciar Sesion para acceder a su cuenta.
         </Modal.Body>
         <Modal.Footer>
-          <Button
+          <Button className="boton-modal-registro"
             variant="primary"
             onClick={() => {
               setShowModal(false);
