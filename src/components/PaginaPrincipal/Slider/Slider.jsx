@@ -12,7 +12,7 @@ function Slider() {
       <Carousel.Item interval={2800}>
         <img
           className="d-block w-100 rounded-1"
-          src="https://i.postimg.cc/fb3vrvB2/rollingvtv2.png"
+          src="https://i.postimg.cc/DwjPTNjR/rollvet550.png"
           alt="First slide"
         />
   
@@ -20,7 +20,7 @@ function Slider() {
       <Carousel.Item interval={2800}>
         <img
           className="d-block w-100 rounded-1"
-          src="https://i.postimg.cc/KvHkHhwb/rollvt3.png"
+          src="https://i.postimg.cc/SQg683qR/rollvt300.png"
           alt="Second slide"
         />
 
@@ -28,7 +28,7 @@ function Slider() {
       <Carousel.Item interval={2800}>
         <img
           className="d-block w-100 rounded-1"
-          src="https://i.postimg.cc/zBpKrG0t/rollingvet2.png"
+          src="https://i.postimg.cc/dtBHZLXP/zyro-image-1.png"
           alt="Third slide"
         />
 
@@ -36,7 +36,7 @@ function Slider() {
       <Carousel.Item interval={2800}>
         <img
           className="d-block w-100 rounded-1"
-          src="https://i.postimg.cc/Z5118TPM/ROLLINGVET3.png"
+          src="https://i.postimg.cc/gj8gcKX8/ROLLINGVET30.png"
           alt="Third slide"
         />
       </Carousel.Item>
@@ -44,7 +44,7 @@ function Slider() {
       <Carousel.Item interval={2800}>
         <img
           className="d-block w-100 rounded-1"
-          src="https://i.postimg.cc/mZv6FjQy/rollingvet4.png"
+          src="https://i.postimg.cc/tRM67yRR/rollingvet40.png"
           alt="Third slide"
         />
       </Carousel.Item>
