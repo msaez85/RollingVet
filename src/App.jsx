@@ -10,6 +10,7 @@ import PaginaProductos from "./components/PaginaProductos/PaginaProductos";
 import Registro from "./components/Registro/Registro";
 import Administracion from "./components/Administracion/Administracion";
 import Pagina404 from "./components/Pagina404/Pagina404";
+import TurnosUsuario from "./components/TurnosUsuario/TurnosUsuario";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/registro" element={<Registro/>}/>
           <Route path="/administracion" element={<Administracion/>}/>
           <Route path="/404" element={<Pagina404 />} />
+          <Route path="/turnosusuario" element={<TurnosUsuario/>}/>
         </Routes>
       </Layout>
     </>
