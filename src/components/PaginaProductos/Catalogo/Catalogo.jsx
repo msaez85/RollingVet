@@ -19,7 +19,7 @@ const Catalogo = () => {
       <Container className="row d-flex justify-content-center " fluid>
         {productos.map((producto, index) => {
           return (
-            <div key={index} className=" p-2 col-sm-12  col-md-6 col-lg-3">
+            <div key={index} className=" p-1 col-sm-12  col-md-6 col-lg-3">
               <Card
                 data-aos="fade-up"
                 data-aos-once="true"

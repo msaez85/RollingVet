@@ -1,13 +1,42 @@
 .imageStyle {
   width: 100%;
-  height: 500px;
+  height: 30rem;
 }
 
 .captionStyle {
-  font-size: 25px;
+  font-size: auto;
+  background-color:#090a139d;
 }
 
 .classCarousell {
-  width: 70%;
-  height: 500px;
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+@media(max-width:700px) {
+  .classCarousell img {
+      height: 15rem;}
+
+  .classCarousell{
+    height: 15rem;
+  }
+  }
+
+
+@media(max-width:420px) {
+  .classCarousell img {
+      height: 32vh;
+  }
+
+  .carousel-control-prev-icon{
+      display: none;
+  }
+
+  .carousel-control-next-icon {
+      display: none;
+  }
+
 }

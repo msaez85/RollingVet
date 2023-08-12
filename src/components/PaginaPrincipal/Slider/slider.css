@@ -1,16 +1,13 @@
 
 .carousel-indicators {
-    background-color: rgba(133, 3, 3, 0) !important;
+    display: none;
 }
 
 .carousel-control-next-icon {
     background-color: rgba(31, 32, 32, 0.404);
 }
 
-.carousel-caption {
-    background-color: rgba(57, 59, 59, 0.404);
-    margin-bottom: 2rem;
-}
+
 
 .carousel-control-prev-icon {
     background-color: rgba(31, 32, 32, 0.404);
