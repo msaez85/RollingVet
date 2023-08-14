@@ -1,6 +1,6 @@
 import "./productos.css";
 import Button from "react-bootstrap/Button";
-import React, { useState } from 'react';
+
 
 const productosData = [
   {
@@ -34,7 +34,7 @@ const ProductosDestacados = () => {
   return (
     <>
       <div data-aos="fade-up">
-        <h3 style={{ textAlign: "center", marginTop: "3rem", color: "rgb(211, 98, 22)" }}>PRODUCTOS DESTACADOS</h3>
+        <h3 style={{ textAlign: "center", marginTop: "3rem", color: "#0D1347" }}>PRODUCTOS DESTACADOS</h3>
         <div className="productos">
           {productosData.map((producto) => (
             <div key={producto.id} id="ocultar">

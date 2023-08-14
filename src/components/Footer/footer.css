@@ -2,7 +2,7 @@
     width: 100%;
     padding: 2rem 0rem;
     min-height: 10rem;
-    background-color: #282540;
+    background-color:#0E1448;
     color: white;
 }
 
@@ -17,16 +17,17 @@
 #uncontrolled-tab-example-tab-contact,
 #uncontrolled-tab-example-tab-home {
     color: rgb(255, 255, 255);
-    background-color: #1a1b1b;
+    background-color:#CA3C3E;
     border-bottom: solid 1px rgb(180, 180, 180);
+    width: 99%
 }
 
 
 #uncontrolled-tab-example-tab-profile:hover,
 #uncontrolled-tab-example-tab-contact:hover,
 #uncontrolled-tab-example-tab-home:hover {
-    background-color: #dfdfdf;
-    color: #121313;
+    background-color:#0E1448;;
+    color: white;
 }
 
 
@@ -65,7 +66,7 @@
 
 
 .texto {
-    background-color: #121313;
+    background-color: #272727;
     color: rgb(243, 243, 243);
     width: 100%;
     display: flex;

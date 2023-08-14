@@ -23,12 +23,14 @@
 
 .tienda a{
     width: 40%;
-    border:solid 2px #138C91;
+    border:solid 2px #CF3D3F;
     border-radius: 12px;
+    color: #0D1347;
 }
 
-.tienda Button:hover{
-    background-color: #138C91;
+.tienda a:hover{
+    background-color: #CF3D3F !important;
+    border: black solid 1px;
 }
 
 
