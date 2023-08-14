@@ -9,16 +9,11 @@ const PaginaPrincipal = () => {
   return (
     <>
       <Slider />
-      <hr />
       <Planes />
-      <hr />
       <Servicios />
-      <hr />
       <ProductosDestacados />
       <Banner/>
-      <hr />
       <Testimonios />
-      <hr />
     </>
   );
 };

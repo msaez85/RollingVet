@@ -1,9 +1,29 @@
 .masInfo-btn{
     width: 170px !important;
     height: 60px !important;
+    background-color: #CF3D3F !important;
+    border: none;
+}
+
+.masInfo-btn:hover{
+    
+    background-color:#0D1347 !important;
+    border: none;
+    transform:scale(.9,.9) !important;
+  transition: all .2s !important;
 }
 
 .masInfo-modal{
-    background-color: rgb(102, 99, 99)!important;
+    background-color: #F8F9FA!important;
+    border-radius: 5px;
+}
+
+.masInfo-modal button{
+    background-color: #CF3D3F!important;
+    border-radius: 5px;
+}
+
+.masInfo-modal button:hover{
+    background-color: #2c0b3b!important;
     border-radius: 5px;
 }

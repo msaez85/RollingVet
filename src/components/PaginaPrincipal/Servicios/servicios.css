@@ -1,59 +1,85 @@
-.card-group-principal{
-    gap: 1rem;
-    margin: 2rem 1.2rem;
+.servicios-v2, .servicios-v3{
+    display: flex;
+    flex-direction: row;
+    border-top: solid 1px rgba(155, 154, 154, 0.767);
+    font-size: 1rem;
     
-}
-
-.card-body-principal{
-    height:fit-content;
-    text-align: center;
-    background-color: rgb(27, 26, 26);
-    border: 1px solid rgba(105, 101, 101, 0.349);
-    color: white;
-}
-
-.card-principal:hover{
-    cursor: pointer;
-    transform:scale(.9,.9);
-    transition: all .2s;
-}
-
-.ver{
+  }
+  
+  .texto-v2 button {
+    background-color: #CF3D3F;
+    color:white;
+    padding: .5rem 2rem;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .imagen-v2,
+  .texto-v2 {
+    width: calc(50% ); 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .texto-v2{
+    padding: 3rem;
+  }
+  
+  .imagen-v2 img{
+    max-width: 100%; 
+    height: 100%; 
+  }
+  
+  .banner-promo{
     display: flex;
     justify-content: center;
-    margin: 2rem 0rem;
-}
-
-.ver button{
-    width: 40%;
-    border:solid 2px #138C91;
-    border-radius: 12px;
-    
-}
-
-
-.card-principal{
-    border: none;
-    padding: 0rem !important;
-}
-
-.card-principal img{
-    border-radius: 0px;
+    align-items: center;
     width: 100%;
-    height:50%;
-    margin: auto;
-}
-
-.ver button:hover{
-    background-color: #138C91;
-}
-
-@media(max-width:630px) {
-    div>h3{
-        font-size: 1.5rem;
+    height:10rem;
+    background-image: url("https://i.postimg.cc/9MYsqrCP/back5d.png");
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+  
+  }
+  
+  
+  @media(max-width:1024px) {
+    .banner-promo{
+      font-size: 1.5rem;
+    }}
+  
+    @media(max-width:768px) {
+      .banner-promo{
+        font-size: 1.2rem;
+      }}
+  
+   
+  
+  
+  
+  @media(max-width:630px) {
+    .servicios-v2{
+      flex-direction: column;
+      font-size: 1rem;
     }
-    .card-group-principal{
-        flex-direction: column;
+  
+    .servicios-v3{
+      flex-direction: column-reverse;
+      font-size: 1rem;
     }
+  
+    .banner-promo{
+      font-size: 1.3rem;
+    }
+  
+    .imagen-v2,
+  .texto-v2 {
+    width: 100%; 
+    box-sizing: border-box; 
+    justify-content: center;
+    align-items: center;
+  }
+  
     
-}
+  }

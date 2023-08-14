@@ -13,7 +13,7 @@ const PaginaProductos = () => {
       <hr />
       <CarrousellProductos />
       <div data-aos="zoom-in" data-aos-once="true">
-        <h2 className="text-center" style={{marginTop:"5rem"}}>Otros productos interesantes</h2>
+        <h2 className="text-center" style={{color:"#0E1449",marginTop:"5rem"}}>Otros productos interesantes</h2>
       </div>
 
       <div className="d-flex justify-content-center">
