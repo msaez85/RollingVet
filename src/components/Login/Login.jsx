@@ -9,27 +9,39 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import "animate.css";
 import Button from "react-bootstrap/Button";
+import { authLogin } from "../../helpers/ApiLogin";
+import { useNavigate } from "react-router-dom";
+import { validationLogin } from "../../helpers/validations";
 
-const Login = () => {
+const Login = ({ iniciarSesion, guardarUsuario }) => {
+  const navigate = useNavigate();
+  const [resultado, setResultado] = useState(null);
+  const [loading, setLoading] = useState(false);
   //HOOKS MODAL
   const [modal, setModal] = useState(false);
-  const [datos, setDatos] = useState({
-    email: "",
-    password: "",
-  });
-
-  const handleInputChange = (e) => {
-    setDatos({
-      ...datos,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const [inputCorreo, setInputCorreo] = useState("");
+  const [inputPassword, setInputPassword] = useState("");
 
   const mostrarModal = () => setModal(true);
   const cerrarModal = () => setModal(false);
 
-  const enviarDatos = (e) => {
+  const enviarDatos = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    const datos = {
+      correo: inputCorreo,
+      password: inputPassword,
+    };
+    const resp = await authLogin(datos);
+    console.log(resp);
+    if (resp?.token) {
+      localStorage.setItem("token", JSON.stringify(resp.token));
+      iniciarSesion();
+      guardarUsuario(resp.usuario);
+      navigate("/");
+    }
+    setResultado(resp);
+    setLoading(false);
   };
 
   return (
@@ -73,7 +85,7 @@ const Login = () => {
                           type="text"
                           required
                           autoComplete="off"
-                          onChange={handleInputChange}
+                          onChange={(e) => setInputCorreo(e.target.value)}
                         />
                       </li>
                       <li className="p-2">
@@ -90,7 +102,7 @@ const Login = () => {
                           type="password"
                           name="contra"
                           placeholder="Contraseña"
-                          onChange={handleInputChange}
+                          onChange={(e) => setInputPassword(e.target.value)}
                           required
                         />
                       </li>
