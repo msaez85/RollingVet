@@ -9,6 +9,7 @@ import FormTurno from "./FormTurno/FormTurno";
 const turnosInicial = [
   {
     ownerName: "Juan Perez",
+    email: "usuario1@mail.com",
     name: "pochoclo",
     vet: "Jose Veterinario",
     date: "17/08/2023",
@@ -17,6 +18,7 @@ const turnosInicial = [
   },
   {
     ownerName: "Juana Perez",
+    email: "usuario2@mail.com",
     name: "pepe",
     vet: "Jose Veterinario",
     date: "17/08/2023",
@@ -25,6 +27,7 @@ const turnosInicial = [
   },
   {
     ownerName: "Jose Perez",
+    email: "usuario3@mail.com",
     name: "pancho",
     vet: "Jose Veterinario",
     date: "17/08/2023",
@@ -33,6 +36,7 @@ const turnosInicial = [
   },
   {
     ownerName: "Carlos Perez",
+    email: "usuario4@mail.com",
     name: "chicho",
     vet: "Jose Veterinario",
     date: "17/08/2023",
@@ -41,6 +45,7 @@ const turnosInicial = [
   },
   {
     ownerName: "Roberto Perez",
+    email: "usuario5@mail.com",
     name: "tito",
     vet: "Jose Veterinario",
     date: "17/08/2023",
@@ -49,6 +54,7 @@ const turnosInicial = [
   },
   {
     ownerName: "Luis Perez",
+    email: "usuario6@mail.com",
     name: "pepe",
     vet: "Jose Veterinario",
     date: "17/08/2023",
@@ -95,6 +101,7 @@ const TablaTurnos = () => {
           <thead>
             <tr>
               <th>Nombre del dueño</th>
+              <th>Correo Electronico</th>
               <th>Mascota</th>
               <th>Veterinario</th>
               <th>Fecha</th>
@@ -107,6 +114,7 @@ const TablaTurnos = () => {
             {turnos.map((turno, index) => (
               <tr key={index}>
                 <td>{turno.ownerName}</td>
+                <td>{turno.email}</td>
                 <td>{turno.name}</td>
                 <td>{turno.vet}</td>
                 <td>{turno.date}</td>

@@ -34,6 +34,15 @@ const FormTurno = ({ show, onHide, onSave, turno, isEdit }) => {
                   onChange={handleChange}
                 />
               </Form.Group>
+              <Form.Group controlId="email">
+                <Form.Label>Correo del dueño</Form.Label>
+                <Form.Control
+                  type="email"
+                  name="email"
+                  value={formTurno.email || ""}
+                  onChange={handleChange}
+                />
+              </Form.Group>
               <Form.Group controlId="name">
                 <Form.Label>Mascota</Form.Label>
                 <Form.Control
