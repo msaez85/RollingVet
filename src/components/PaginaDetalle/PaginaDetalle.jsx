@@ -50,7 +50,7 @@ const PaginaDetalle = () => {
           <div className="img-detalle">
             <img
               src={plan.imagen}
-              className="img-main img-fluid"
+              className="img-main "
               alt="detail"
             />
           </div>
