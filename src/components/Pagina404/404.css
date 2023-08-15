@@ -1,0 +1,15 @@
+.volver1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.volver1 button{
+    padding: 10px;
+    border:none;
+    border-radius: 15px;
+    margin: 2rem 0rem;
+    background-color: #CF3D3F;
+    color: white;
+}

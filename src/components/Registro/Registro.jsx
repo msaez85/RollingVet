@@ -77,7 +77,7 @@ const Registro = () => {
       
 
       <Form data-aos='fade-up' onSubmit={handleSumbit} className="registro-usuario">
-        <h3 style={{ textAlign: "center", marginTop: "2rem" }}>Registro</h3>
+        <h3 style={{ textAlign: "center", marginTop: "2rem" ,color:"#0D1347"}}>Registro</h3>
         <div className="img-registro d-flex justify-content-center align-items-center">
             <img src="https://img.icons8.com/?size=512&id=124077&format=png" alt="imagenregistro" 
             style={{ width: "120px", height: "120px" }}/>
@@ -100,6 +100,7 @@ const Registro = () => {
             />
           </div>
         </Form.Group>
+
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email</Form.Label>
@@ -168,7 +169,7 @@ const Registro = () => {
           <Form.Check
             required
             type="checkbox"
-            label={<a href="">Acepto terminos y condiciones</a>}
+            label={<a href="/404">Acepto terminos y condiciones</a>}
             
           />
         </Form.Group>

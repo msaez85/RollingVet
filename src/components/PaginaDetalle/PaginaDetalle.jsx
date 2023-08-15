@@ -44,6 +44,7 @@ const PaginaDetalle = () => {
 
   return (
     <>
+      
       <main data-aos="fade-up" className="main">
         
         <div className="detalle container-fluid  justify-content-center align-items-start">

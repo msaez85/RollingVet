@@ -45,7 +45,7 @@ function Slider() {
         <img
           className="d-block w-100 rounded-1"
           src="https://i.postimg.cc/tRM67yRR/rollingvet40.png"
-          alt="Third slide"
+          alt="four slide"
         />
       </Carousel.Item>
 

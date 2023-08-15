@@ -56,7 +56,7 @@ function Formulario() {
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <Form.Label>Telefono</Form.Label>
-                <Form.Control type="text" placeholder="numero telefonico" />
+                <Form.Control type="text" placeholder="381-xxxxxx" />
                 <Form.Label>Pregunta</Form.Label>
                 <Form.Control as="textarea" rows={5} />
               </Form.Group>
