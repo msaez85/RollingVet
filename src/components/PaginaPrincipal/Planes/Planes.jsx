@@ -10,7 +10,7 @@ function Planes() {
         <div className="container w-100" data-aos="zoom-in"
         style={{boxShadow:"none"}}>
           <h2 style={{color:"#0D1347"}}>La obra social de tu mascota es RollingVet.</h2>
-          <p style={{color:"black",fontSize:"1.5rem"}}> 
+          <p style={{color:"black",fontSize:"1.2rem"}}> 
             Si estabas buscando un plan de salud para tu perro y gato, RollingVet es tu
             mejor decisión ya que los cuidamos con la mejor cobertura de Tucuman.
           </p>
@@ -22,7 +22,7 @@ function Planes() {
           
         </div>
         <div>
-            <img style={{width:"90%" ,height:"90%"}} src="https://planes.ikeargentina.com.ar/mascotasonline/images/landing_mascotas_online_b.png" alt="" />
+            <img style={{width:"90%" ,height:"90%"}} src="https://i.postimg.cc/0yn4Y8yp/landing-mascotas-online-555b.png" alt="planes" />
         </div>
       </div>
     </>

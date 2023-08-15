@@ -34,7 +34,6 @@ const ProductosDestacados = () => {
   return (
     <>
       <div data-aos="fade-up">
-        <h3 style={{ textAlign: "center", marginTop: "3rem", color: "#0D1347" }}>PRODUCTOS DESTACADOS</h3>
         <div className="productos">
           {productosData.map((producto) => (
             <div key={producto.id} id="ocultar">

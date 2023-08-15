@@ -10,7 +10,6 @@ const PaginaProductos = () => {
       <div data-aos="fade-up" className="banner d-flex justify-content-center">
         <img src="https://i.postimg.cc/gjfGpxH7/zyro-image.png" alt="banner" />
       </div>
-      <hr />
       <CarrousellProductos />
       <div data-aos="zoom-in" data-aos-once="true">
         <h2 className="text-center" style={{color:"#0E1449",marginTop:"5rem"}}>Otros productos interesantes</h2>

@@ -9,6 +9,17 @@
 
 }
 
+.pagos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.pagos img{
+    width: 2rem;
+}
+
 .card-body-testimonios img{
     width: auto !important;
     height: 10rem !important;
@@ -25,7 +36,7 @@
 .card-body-testimonios{
     height:fit-content;
     text-align: center;
-    background-color: rgb(250, 250, 250);
+    background-color: #E8E8E8;
     color:#0D1347
 }
 

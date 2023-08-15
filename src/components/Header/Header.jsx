@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import logo2 from "/src/assets/img/logo2.png";
 import "./header.css";
 import { Link } from "react-router-dom";
+import NavDropdown from 'react-bootstrap/NavDropdown'
 
 function Header({ cerrarSesion, user }) {
   return (
@@ -24,6 +25,16 @@ function Header({ cerrarSesion, user }) {
             style={{ maxHeight: "200px" }}
             navbarScroll
           >
+            <NavDropdown title="Planes" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/planes/1">Plan Cachorros</NavDropdown.Item>
+              <NavDropdown.Item href="/planes/2">
+                Plan Madurando
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/planes/3">Plan Adultos</NavDropdown.Item>
+        
+            </NavDropdown>
+
+
             <Nav.Link as={Link} to="/nosotros">
               Conocenos
             </Nav.Link>

@@ -21,7 +21,7 @@ const testimoniosData = [
   {
     name: "Lionel",
     imageSrc: "https://www.clarin.com/img/2021/08/12/RsGKHmj9x_720x0__1.jpg",
-    testimonio: "Un poco costoso pero lo vale",
+    testimonio: '"Un poco costoso pero lo vale..."',
     date: "6 days ago",
   },
   {
@@ -57,18 +57,20 @@ const Testimonios = () => {
 
   return (
     <>
-
-      <div data-aos="fade-up" className="banner-promo">
-        <p>Envios gratis y en el dia para su comodidad</p>
+    <div data-aos="fade-up" className="banner-promo">
+        <p>
+        Los Honorarios de cirugía tienen un 15% de descuento en efectivo
+        o 3 cuotas sin interés.
+        </p>
+        
       </div>
+      <div data-aos="fade-up" className="titulo-medicos">
+        <h3 style={{ textAlign: "center" }}>OPINIONES DE NUESTROS CLIENTES</h3>
+      </div>
+      
 
-      <div data-aos="fade-up" className="my-5">
-        <h3
-          style={{ textAlign: "center", color: "#0D1347" }}
-        >
-          NUESTROS CLIENTES
-        </h3>
-        <Carousel controls={false} interval={3000} pause={false} wrap={true}>
+      <div data-aos="fade-up" style={{margin:"3rem 0rem"}}className="">
+        <Carousel fade controls={false} interval={3000} pause={false} wrap={true}>
           {chunks.map((chunk, chunkIndex) => (
             <Carousel.Item key={chunkIndex} className="carousel-item">
               <div className="d-flex">
