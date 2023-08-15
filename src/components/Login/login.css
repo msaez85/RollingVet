@@ -32,7 +32,7 @@ ul {
   border-top: none;
   border-left: none;
   border-right: none;
-  border-color: #9dc7d1;
+  border-color: #cf3d3f;
   outline: none;
 }
 
@@ -40,19 +40,23 @@ ul {
   animation: pulse;
   animation-duration: 1s;
   outline: none;
-  box-shadow: 0 4px 2px -2px #9dc7d1;
+  box-shadow: 0 4px 2px -2px #6c757d;
 }
 
 .classHeader {
   background: none;
 }
 
+.modalError {
+  width: 100%;
+  margin-bottom: 50px;
+}
 .containerImg {
   width: 280px;
-  border-radius: 3px;
+  border-radius: 4px;
   margin-top: 16px;
   height: 400px;
-  background-image: url("https://img.myloview.com/stickers/cute-gray-tabby-cat-on-light-blue-background-space-for-text-lovely-pet-700-171761167.jpg");
+  background-image: url("https://www.zastavki.com/pictures/2560x1600/2020Funny_wallpapers_Ginger_cat_in_a_spiderman_mask_on_a_red_background_146392_19.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
