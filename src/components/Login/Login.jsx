@@ -11,15 +11,15 @@ import "animate.css";
 import Button from "react-bootstrap/Button";
 import { authLogin } from "../../helpers/ApiLogin";
 import { useNavigate } from "react-router-dom";
-import { validationLogin } from "../../helpers/validations";
 
 const Login = ({ iniciarSesion, guardarUsuario }) => {
   const navigate = useNavigate();
+
   const [resultado, setResultado] = useState(null);
   const [loading, setLoading] = useState(false);
   //HOOKS MODAL
   const [modal, setModal] = useState(false);
-  const [inputCorreo, setInputCorreo] = useState("");
+  const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
 
   const mostrarModal = () => setModal(true);
@@ -29,7 +29,7 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
     e.preventDefault();
     setLoading(true);
     const datos = {
-      correo: inputCorreo,
+      email: inputEmail,
       password: inputPassword,
     };
     const resp = await authLogin(datos);
@@ -85,7 +85,7 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
                           type="text"
                           required
                           autoComplete="off"
-                          onChange={(e) => setInputCorreo(e.target.value)}
+                          onChange={(e) => setInputEmail(e.target.value)}
                         />
                       </li>
                       <li className="p-2">

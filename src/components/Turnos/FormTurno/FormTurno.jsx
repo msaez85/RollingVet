@@ -91,13 +91,20 @@ const FormTurno = ({ show, onHide, onSave, turno, isEdit }) => {
             </Form>
           </Modal.Body>
           <Modal.Footer>
-            <Button className="btn btn-dark mx-2" onClick={onHide}>
+            <Button
+              className="btn btn-dark mx-2"
+              onClick={() => {
+                onHide();
+                setFormTurno({});
+              }}
+            >
               Cerrar
             </Button>
             <Button
               className="btn btn-dark mx-2"
               onClick={() => {
                 onSave(formTurno);
+                setFormTurno({});
                 onHide();
               }}
             >

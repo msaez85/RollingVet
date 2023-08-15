@@ -9,7 +9,7 @@ function Banner() {
 
   return (
     <>
-    <div fade data-aos="fade-up" style={{margin:"2rem 0rem"}}>
+    <div data-aos="fade-up" style={{margin:"2rem 0rem"}}>
       <Carousel controls={false} indicators={false} >
         {images.map((image, index) => (
           <Carousel.Item key={index} interval={1800}>
