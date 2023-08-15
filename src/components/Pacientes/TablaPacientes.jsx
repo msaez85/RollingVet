@@ -3,59 +3,14 @@ import React, { useState, useEffect } from "react";
 import { Table, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt, faTrash } from "@fortawesome/free-solid-svg-icons";
-
+import { validationPaciente } from "../../helpers/validations";
 import FormPaciente from "./FormPaciente/FormPaciente";
-
-const mascotasInicial = [
-  {
-    ownerName: "Juan Perez",
-    email: "juan@mail.com",
-    phone: "123-456-7890",
-    name: "pochoclo",
-    race: "Persia",
-    species: "gato",
-  },
-  {
-    ownerName: "Juana Perez",
-    email: "juana@mail.com",
-    phone: "987-654-3210",
-    name: "pepe",
-    race: "Golden Retriever",
-    species: "perro",
-  },
-  {
-    ownerName: "Jose Perez",
-    email: "jose@mail.com",
-    phone: "123-456-7890",
-    name: "pancho",
-    race: "Salchicha",
-    species: "perro",
-  },
-  {
-    ownerName: "Carlos Perez",
-    email: "carlos@mail.com",
-    phone: "987-654-3210",
-    name: "chicho",
-    race: "Pastor Aleman",
-    species: "perro",
-  },
-  {
-    ownerName: "Roberto Perez",
-    email: "roberto@mail.com",
-    phone: "123-456-7890",
-    name: "tito",
-    race: "Cacatua",
-    species: "loro",
-  },
-  {
-    ownerName: "Luis Perez",
-    email: "luis@mail.com",
-    phone: "987-654-3210",
-    name: "pepe",
-    race: "Doverman",
-    species: "perro",
-  },
-];
+import {
+  actualizarPaciente,
+  agregarPaciente,
+  borrarPaciente,
+  traerPacientes,
+} from "../../helpers/ApiPacientes";
 
 const TablaPacientes = () => {
   const [mascotas, setMascotas] = useState([]);
@@ -63,31 +18,72 @@ const TablaPacientes = () => {
   const [showEditModal, setShowEditModal] = useState(false);
   const [mascotaSeleccionada, setMascotaSeleccionada] = useState(null);
 
-  const handleAdd = (nuevaMascota) => {
-    setMascotas([...mascotas, nuevaMascota]);
-    setShowAddModal(false);
+  const handleAdd = async (nuevaMascota) => {
+    const errors = validationPaciente(nuevaMascota);
+    if (Object.keys(errors).length === 0) {
+      try {
+        const response = await agregarPaciente(nuevaMascota);
+        if (response.status === 200) {
+          console.log("Paciente generado exitosamente");
+          setMascotas([...mascotas, nuevaMascota]);
+          setShowAddModal(false);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
   };
 
-  const handleEdit = (nuevaMascota) => {
-    const mascotasActualizadas = mascotas.map((mascota) =>
-      mascota === mascotaSeleccionada
-        ? { ...mascota, ...nuevaMascota }
-        : mascota
-    );
-    setMascotas(mascotasActualizadas);
-    setMascotaSeleccionada(null);
-    setShowEditModal(false);
+  const handleEdit = async (nuevaMascota) => {
+    const errors = validationPaciente(nuevaMascota);
+    if (Object.keys(errors).length === 0) {
+      try {
+        const response = await actualizarPaciente(
+          nuevaMascota,
+          nuevaMascota.pid
+        );
+        if (response.status === 200) {
+          console.log("Paciente editado exitosamente");
+          const mascotasActualizadas = mascotas.map((mascota) =>
+            mascota === mascotaSeleccionada
+              ? { ...mascota, ...nuevaMascota }
+              : mascota
+          );
+          setMascotas(mascotasActualizadas);
+          setMascotaSeleccionada(null);
+          setShowEditModal(false);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
   };
 
-  const handleDelete = (mascotaToDelete) => {
-    const mascotasActualizadas = mascotas.filter(
-      (mascota) => mascota !== mascotaToDelete
-    );
-    setMascotas(mascotasActualizadas);
+  const handleDelete = async (mascotaToDelete) => {
+    try {
+      const response = await borrarPaciente(mascotaToDelete.pid);
+      if (response.status === 200) {
+        const mascotasActualizadas = mascotas.filter(
+          (mascota) => mascota !== mascotaToDelete
+        );
+        setMascotas(mascotasActualizadas);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const traerTodosLosPacientes = async () => {
+    try {
+      const pacientesInicio = await traerPacientes();
+      setMascotas(pacientesInicio.pacientes);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
-    setMascotas(mascotasInicial);
+    traerTodosLosPacientes();
   }, []);
 
   return (
@@ -107,7 +103,7 @@ const TablaPacientes = () => {
           </thead>
           <tbody>
             {mascotas.map((mascota) => (
-              <tr key={mascota.email}>
+              <tr key={mascota.pid}>
                 <td>{mascota.ownerName}</td>
                 <td>{mascota.email}</td>
                 <td>{mascota.phone}</td>

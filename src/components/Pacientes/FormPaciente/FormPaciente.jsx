@@ -82,13 +82,20 @@ const FormPaciente = ({ show, onHide, onSave, mascota, isEdit }) => {
             </Form>
           </Modal.Body>
           <Modal.Footer>
-            <Button className="btn btn-dark mx-2" onClick={onHide}>
+            <Button
+              className="btn btn-dark mx-2"
+              onClick={() => {
+                onHide();
+                setFormMascota({});
+              }}
+            >
               Cerrar
             </Button>
             <Button
               className="btn btn-dark mx-2"
               onClick={() => {
                 onSave(formMascota);
+                setFormMascota({});
                 onHide();
               }}
             >
