@@ -12,9 +12,9 @@
 }
 
 .bg-body-tertiary{
-    border-bottom: 18px solid #282540;
+    border-bottom: 5px solid #282540;
     width: 100%;
-    background-color: rgb(255, 255, 255) !important;
+    background-color: #FBFBFB !important;
     font-size: 1.1rem;
 }
 

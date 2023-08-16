@@ -41,7 +41,9 @@ function Formulario() {
       <Modal show={show} onHide={handleClose}>
         <div className="masInfo-modal">
           <Modal.Header closeButton>
-            <Modal.Title>Mas Información</Modal.Title>
+            <Modal.Title style={{ textAlign: "center" }}>
+              Contactanos
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form onSubmit={handleFormSubmit}>
@@ -56,14 +58,11 @@ function Formulario() {
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <Form.Label>Telefono</Form.Label>
-                <Form.Control type="text" placeholder="numero telefonico" />
+                <Form.Control type="text" placeholder="381-xxxxxx" />
                 <Form.Label>Pregunta</Form.Label>
                 <Form.Control as="textarea" rows={5} />
               </Form.Group>
               <div className="container-fluid d-flex flex-row justify-content-center align-items-start">
-                <Button className="btn btn-dark mx-3" onClick={handleClose}>
-                  Cerrar
-                </Button>
                 <Button className="btn btn-dark mx-3" type="submit">
                   Enviar
                 </Button>

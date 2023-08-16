@@ -1,17 +1,10 @@
-/* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-  } */
-  
-  .container {
-    /* max-width: 700px; */
+.container {
+   
     background-color: #fff;
     border-radius: 10px;
     padding: 40px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    /* margin-right: 100px; */
+   
     
   }
   
@@ -52,8 +45,6 @@
     border: 1px solid #ced4da;
     padding: 6px 35px 6px 10px;
     border-radius: 4px;
-    /* width: 50%;
-  } */
   }
   .input-group label {
     position: absolute;
@@ -66,6 +57,7 @@
     padding-left: 10px;
     pointer-events: none;
   }
+
   
   .img-fluid {
     width: 100%;
@@ -93,16 +85,12 @@
     }
   }
   
-  /* @media (max-width: 768px) {
-    .container {
-      margin-right: 50px; 
+  @media (max-width: 768px) {
+    .img-fluid {
+      display: none;
     }
   }
   
-  @media (max-width: 470px) {
-    .container {
-      margin-right: 50px; 
-    } */
     @media (max-width: 377px) {
       .container {
         margin-right: 50px; 

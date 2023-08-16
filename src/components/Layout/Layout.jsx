@@ -1,11 +1,13 @@
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import Wsp from "../Wsp/Wsp";
 
-const Layout = ({ children }) => {
+const Layout = ({ cerrarSesion, user, children }) => {
   return (
     <>
-      <Header />
+      <Header cerrarSesion={cerrarSesion} user={user} />
       {children}
+      <Wsp/>
       <Footer />
     </>
   );

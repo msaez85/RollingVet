@@ -1,0 +1,27 @@
+/* wsp.css */
+.wsp {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 50000;
+  }
+  
+  .wsp a {
+    text-decoration: none;
+  }
+  
+  .wsp img {
+    width: 64px;
+    height: 64px;
+  }
+
+.wsp img:hover{
+    transform:scale(1.2,1.2) !important;
+    transition: all .2s !important;
+}
+
+
+@media(max-width:500px) {
+    .wsp{
+      display: none;
+    }}

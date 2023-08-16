@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 2rem 2rem;
+    margin: 6rem 2rem;
     gap: 3rem;
 }
 
@@ -21,14 +21,16 @@
     justify-content: center;
 }
 
-.tienda Button{
-    width: 30%;
+.tienda a{
+    width: 40%;
+    border:solid 2px #CF3D3F;
     border-radius: 12px;
-    border-color: #138C91;
+    color: #0D1347;
 }
 
-.tienda Button:hover{
-    background-color: #138C91;
+.tienda a:hover{
+    background-color: #CF3D3F !important;
+    border: black solid 1px;
 }
 
 

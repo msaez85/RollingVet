@@ -1,0 +1,57 @@
+.titulo-medicos{
+    width: 50%;
+    margin: auto;
+    background-color:#0D1347;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.medicos{
+    margin: 6rem 0rem 0rem 0rem; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #E8E8E8;
+    height: 100%;
+    
+}
+
+.medicos img{
+    width: 15rem;
+    height: auto;
+    
+}
+
+.medicos p{
+    padding: 2rem;
+    background-color: #0D1347;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: -1px 0px 9px 0px rgba(0,0,0,0.39);
+-webkit-box-shadow: -1px 0px 9px 0px rgba(0,0,0,0.39);
+-moz-box-shadow: -1px 0px 9px 0px rgba(0,0,0,0.39);
+}
+
+
+@media(max-width:768px) {
+    .medicos{
+        flex-direction: column;
+        margin: 2rem 0rem 0rem 0rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titulo-medicos{
+        width: 90%;
+    }
+
+    
+
+
+}
+
+ 

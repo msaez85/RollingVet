@@ -3,20 +3,19 @@ import ProductosDestacados from "../PaginaPrincipal/ProductosDestacados/Producto
 import Testimonios from "../PaginaPrincipal/Testimonios/Testimonios";
 import Servicios from "../PaginaPrincipal/Servicios/Servicos";
 import Planes from "../PaginaPrincipal/Planes/Planes";
+import Banner from "./BannerMarcas/Banner";
+import EquipoMedico from "./EquipoMedico/EquipoMedico";
 
 const PaginaPrincipal = () => {
   return (
     <>
       <Slider />
-      <hr />
       <Planes />
-      <hr />
       <Servicios />
-      <hr />
       <ProductosDestacados />
-      <hr />
+      <Banner/>
+      <EquipoMedico/>
       <Testimonios />
-      <hr />
     </>
   );
 };

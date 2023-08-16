@@ -1,5 +1,9 @@
+import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
+import './404.css'
+
+
 const Pagina404 = () => {
   return (
     <>
@@ -17,6 +21,12 @@ const Pagina404 = () => {
         >
           No es tu culpa, es nuestra. Proba refrescando la pagina
         </h2>
+
+        <div className="volver1">
+          <a href="javascript:history.back(-1);"><button>Volver Atras</button></a>
+        </div>
+
+        
       </Container>
     </>
   );

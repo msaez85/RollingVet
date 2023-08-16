@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./FormTurno.css";
-import { Modal, Button, Form } from "react-bootstrap";
+import { Modal, Button, Form, ModalBody } from "react-bootstrap";
+import { validationTurno } from "../../../helpers/validations";
 
 const FormTurno = ({ show, onHide, onSave, turno, isEdit }) => {
   const [formTurno, setFormTurno] = useState(turno || {});
+  const [modalError, setModalError] = useState(false);
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     setFormTurno(turno || {});
@@ -31,6 +34,15 @@ const FormTurno = ({ show, onHide, onSave, turno, isEdit }) => {
                   type="text"
                   name="ownerName"
                   value={formTurno.ownerName || ""}
+                  onChange={handleChange}
+                />
+              </Form.Group>
+              <Form.Group controlId="email">
+                <Form.Label>Correo del dueño</Form.Label>
+                <Form.Control
+                  type="email"
+                  name="email"
+                  value={formTurno.email || ""}
                   onChange={handleChange}
                 />
               </Form.Group>
@@ -82,14 +94,28 @@ const FormTurno = ({ show, onHide, onSave, turno, isEdit }) => {
             </Form>
           </Modal.Body>
           <Modal.Footer>
-            <Button className="btn btn-dark mx-2" onClick={onHide}>
+            <Button
+              className="btn btn-dark mx-2"
+              onClick={() => {
+                onHide();
+                setFormTurno({});
+              }}
+            >
               Cerrar
             </Button>
             <Button
               className="btn btn-dark mx-2"
               onClick={() => {
-                onSave(formTurno);
-                onHide();
+                const erroresForm = validationTurno(formTurno);
+                if (Object.keys(erroresForm).length === 0) {
+                  setErrors([]);
+                  onSave(formTurno);
+                  setFormTurno({});
+                  onHide();
+                } else {
+                  setErrors(erroresForm);
+                  setModalError(true);
+                }
               }}
             >
               {isEdit ? "Guardar Cambios" : "Agregar Turno"}
@@ -97,6 +123,23 @@ const FormTurno = ({ show, onHide, onSave, turno, isEdit }) => {
           </Modal.Footer>
         </div>
       </Modal>
+      {modalError && (
+        <Modal
+          show={modalError}
+          onHide={() => setModalError(false)}
+          backdrop="static"
+          keyboard={true}
+        >
+          <Modal.Header closeButton>
+            <h4>Errors! </h4>
+          </Modal.Header>
+          <ModalBody>
+            {Object.keys(errors).map((key) => (
+              <h5 key={key}>{errors[key]}</h5>
+            ))}
+          </ModalBody>
+        </Modal>
+      )}
     </>
   );
 };

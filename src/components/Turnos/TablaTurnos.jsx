@@ -3,59 +3,13 @@ import React, { useState, useEffect } from "react";
 import { Table, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt, faTrash } from "@fortawesome/free-solid-svg-icons";
-
 import FormTurno from "./FormTurno/FormTurno";
-
-const turnosInicial = [
-  {
-    ownerName: "Juan Perez",
-    name: "pochoclo",
-    vet: "Jose Veterinario",
-    date: "17/08/2023",
-    time: "09:00",
-    detail: "no se siente bien",
-  },
-  {
-    ownerName: "Juana Perez",
-    name: "pepe",
-    vet: "Jose Veterinario",
-    date: "17/08/2023",
-    time: "09:30",
-    detail: "no se siente bien",
-  },
-  {
-    ownerName: "Jose Perez",
-    name: "pancho",
-    vet: "Jose Veterinario",
-    date: "17/08/2023",
-    time: "10:00",
-    detail: "no se siente bien",
-  },
-  {
-    ownerName: "Carlos Perez",
-    name: "chicho",
-    vet: "Jose Veterinario",
-    date: "17/08/2023",
-    time: "10:30",
-    detail: "no se siente bien",
-  },
-  {
-    ownerName: "Roberto Perez",
-    name: "tito",
-    vet: "Jose Veterinario",
-    date: "17/08/2023",
-    time: "11:00",
-    detail: "no se siente bien",
-  },
-  {
-    ownerName: "Luis Perez",
-    name: "pepe",
-    vet: "Jose Veterinario",
-    date: "17/08/2023",
-    time: "11:30",
-    detail: "no se siente bien",
-  },
-];
+import {
+  actualizarTurno,
+  agregarTurno,
+  borrarTurno,
+  traerTurnos,
+} from "../../helpers/ApiTurnos";
 
 const TablaTurnos = () => {
   const [turnos, setTurnos] = useState([]);
@@ -63,29 +17,62 @@ const TablaTurnos = () => {
   const [showEditModal, setShowEditModal] = useState(false);
   const [turnoSeleccionado, setTurnoSeleccionado] = useState(null);
 
-  const handleAdd = (nuevoTurno) => {
-    setTurnos([...turnos, nuevoTurno]);
-    setShowAddModal(false);
+  const handleAdd = async (nuevoTurno) => {
+    try {
+      const response = await agregarTurno(nuevoTurno);
+      if (response.status === 200) {
+        console.log("Turno generado exitosamente");
+        setTurnos([...turnos, nuevoTurno]);
+        setShowAddModal(false);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  const handleEdit = (nuevoTurno) => {
-    const turnosActualizados = turnos.map((turno) =>
-      turno === turnoSeleccionado ? { ...turno, ...nuevoTurno } : turno
-    );
-    setTurnos(turnosActualizados);
-    setTurnoSeleccionado(null);
-    setShowEditModal(false);
+  const handleEdit = async (nuevoTurno) => {
+    try {
+      const response = await actualizarTurno(nuevoTurno, nuevoTurno.tid);
+      if (response.status === 200) {
+        console.log("Turno editado exitosamente");
+        const turnosActualizados = turnos.map((turno) =>
+          turno === turnoSeleccionado ? { ...turno, ...nuevoTurno } : turno
+        );
+        setTurnos(turnosActualizados);
+        setTurnoSeleccionado(null);
+        setShowEditModal(false);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  const handleDelete = (turnoToDelete) => {
-    const turnosActualizados = turnos.filter(
-      (turno) => turno !== turnoToDelete
-    );
-    setTurnos(turnosActualizados);
+  const handleDelete = async (turnoToDelete) => {
+    try {
+      const response = await borrarTurno(turnoToDelete.tid);
+      if (response.status === 200) {
+        console.log("Turno borrado exitosamente");
+        const turnosActualizados = turnos.filter(
+          (turno) => turno !== turnoToDelete
+        );
+        setTurnos(turnosActualizados);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const traerTodosLosTurnos = async () => {
+    try {
+      const turnosInicio = await traerTurnos();
+      setTurnos(turnosInicio.turnos);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
-    setTurnos(turnosInicial);
+    traerTodosLosTurnos();
   }, []);
 
   return (
@@ -95,6 +82,7 @@ const TablaTurnos = () => {
           <thead>
             <tr>
               <th>Nombre del dueño</th>
+              <th>Correo Electronico</th>
               <th>Mascota</th>
               <th>Veterinario</th>
               <th>Fecha</th>
@@ -104,9 +92,10 @@ const TablaTurnos = () => {
             </tr>
           </thead>
           <tbody>
-            {turnos.map((turno, index) => (
-              <tr key={index}>
+            {turnos.map((turno) => (
+              <tr key={turno.tid}>
                 <td>{turno.ownerName}</td>
+                <td>{turno.email}</td>
                 <td>{turno.name}</td>
                 <td>{turno.vet}</td>
                 <td>{turno.date}</td>
