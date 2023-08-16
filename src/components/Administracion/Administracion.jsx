@@ -13,6 +13,9 @@ const Administracion = () => {
 
   return (
     <>
+    <div className="titulo-admin">
+      <h2>Administracion RollingVet</h2>
+    </div>
       <div className="administracion-btn">
         <Button
           className={mostarPacientes ? "btn btn-dark mx-2" : "btn btn-secondary mx-2"}
@@ -21,6 +24,7 @@ const Administracion = () => {
           Pacientes
         </Button>
         <Button
+          
           className={mostarPacientes ? "btn btn-secondary mx-2" : "btn btn-dark mx-2"}
           onClick={() => cambiarTabla(false)}
         >

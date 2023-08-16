@@ -1,7 +1,14 @@
 .tabla-pacientes-btn-agregar{
     width: 100%;    
     display: flex;
-    justify-content: end;
+    justify-content: center;
     padding-right: 25px;
 
 }
+
+.tabla-pacientes-btn-agregar button{
+    background-color: #198754 !important;
+    padding: 1rem;
+    border:none
+}
+
