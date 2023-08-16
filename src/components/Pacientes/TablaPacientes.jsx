@@ -86,10 +86,13 @@ const TablaPacientes = () => {
     traerTodosLosPacientes();
   }, []);
 
+
   return (
+    <>
+    
     <div className="paciente-tabla">
       <article className="row my-2 d-flex justify-content-center table-responsive">
-        <Table striped bordered hover className="text-center">
+        <Table striped bordered hover className="tabla-pacientes text-center">
           <thead>
             <tr>
               <th>Nombre del dueño</th>
@@ -155,6 +158,7 @@ const TablaPacientes = () => {
         isEdit={showEditModal}
       />
     </div>
+    </>
   );
 };
 
