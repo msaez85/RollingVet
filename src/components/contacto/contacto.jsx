@@ -43,7 +43,8 @@ const Contacto = () => {
       
         <div className="col-md-6 d-flex align-items-center justify-content-center">
             <img
-              src="https://hips.hearstapps.com/hmg-prod/images/perros-vivir-mas-anos-1669733501.jpg"
+              // src="https://i.postimg.cc/90W6xbqn/perros-vivir-mas-anos-1669733501-removebg-preview.png"  //foto sin color
+              src="https://i.postimg.cc/wjfjDtnz/perros-vivir-mas-anos-1669733501-removebg-preview-1.png" //foto color rojo
               alt="Perro"
               className="img-fluid"
             />
