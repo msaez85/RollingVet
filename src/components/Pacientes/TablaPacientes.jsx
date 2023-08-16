@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { Table, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt, faTrash } from "@fortawesome/free-solid-svg-icons";
-import { validationPaciente } from "../../helpers/validations";
 import FormPaciente from "./FormPaciente/FormPaciente";
 import {
   actualizarPaciente,
@@ -19,43 +18,34 @@ const TablaPacientes = () => {
   const [mascotaSeleccionada, setMascotaSeleccionada] = useState(null);
 
   const handleAdd = async (nuevaMascota) => {
-    const errors = validationPaciente(nuevaMascota);
-    if (Object.keys(errors).length === 0) {
-      try {
-        const response = await agregarPaciente(nuevaMascota);
-        if (response.status === 200) {
-          console.log("Paciente generado exitosamente");
-          setMascotas([...mascotas, nuevaMascota]);
-          setShowAddModal(false);
-        }
-      } catch (error) {
-        console.log(error);
+    try {
+      const response = await agregarPaciente(nuevaMascota);
+      if (response.status === 200) {
+        console.log("Paciente generado exitosamente");
+        setMascotas([...mascotas, nuevaMascota]);
+        setShowAddModal(false);
       }
+    } catch (error) {
+      console.log(error);
     }
   };
 
   const handleEdit = async (nuevaMascota) => {
-    const errors = validationPaciente(nuevaMascota);
-    if (Object.keys(errors).length === 0) {
-      try {
-        const response = await actualizarPaciente(
-          nuevaMascota,
-          nuevaMascota.pid
+    try {
+      const response = await actualizarPaciente(nuevaMascota, nuevaMascota.pid);
+      if (response.status === 200) {
+        console.log("Paciente editado exitosamente");
+        const mascotasActualizadas = mascotas.map((mascota) =>
+          mascota === mascotaSeleccionada
+            ? { ...mascota, ...nuevaMascota }
+            : mascota
         );
-        if (response.status === 200) {
-          console.log("Paciente editado exitosamente");
-          const mascotasActualizadas = mascotas.map((mascota) =>
-            mascota === mascotaSeleccionada
-              ? { ...mascota, ...nuevaMascota }
-              : mascota
-          );
-          setMascotas(mascotasActualizadas);
-          setMascotaSeleccionada(null);
-          setShowEditModal(false);
-        }
-      } catch (error) {
-        console.log(error);
+        setMascotas(mascotasActualizadas);
+        setMascotaSeleccionada(null);
+        setShowEditModal(false);
       }
+    } catch (error) {
+      console.log(error);
     }
   };
 

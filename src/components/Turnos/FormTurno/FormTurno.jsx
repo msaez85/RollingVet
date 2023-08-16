@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./FormTurno.css";
-import { Modal, Button, Form } from "react-bootstrap";
+import { Modal, Button, Form, ModalBody } from "react-bootstrap";
+import { validationTurno } from "../../../helpers/validations";
 
 const FormTurno = ({ show, onHide, onSave, turno, isEdit }) => {
   const [formTurno, setFormTurno] = useState(turno || {});
+  const [modalError, setModalError] = useState(false);
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     setFormTurno(turno || {});
@@ -103,9 +106,16 @@ const FormTurno = ({ show, onHide, onSave, turno, isEdit }) => {
             <Button
               className="btn btn-dark mx-2"
               onClick={() => {
-                onSave(formTurno);
-                setFormTurno({});
-                onHide();
+                const erroresForm = validationTurno(formTurno);
+                if (Object.keys(erroresForm).length === 0) {
+                  setErrors([]);
+                  onSave(formTurno);
+                  setFormTurno({});
+                  onHide();
+                } else {
+                  setErrors(erroresForm);
+                  setModalError(true);
+                }
               }}
             >
               {isEdit ? "Guardar Cambios" : "Agregar Turno"}
@@ -113,6 +123,23 @@ const FormTurno = ({ show, onHide, onSave, turno, isEdit }) => {
           </Modal.Footer>
         </div>
       </Modal>
+      {modalError && (
+        <Modal
+          show={modalError}
+          onHide={() => setModalError(false)}
+          backdrop="static"
+          keyboard={true}
+        >
+          <Modal.Header closeButton>
+            <h4>Errors! </h4>
+          </Modal.Header>
+          <ModalBody>
+            {Object.keys(errors).map((key) => (
+              <h5 key={key}>{errors[key]}</h5>
+            ))}
+          </ModalBody>
+        </Modal>
+      )}
     </>
   );
 };

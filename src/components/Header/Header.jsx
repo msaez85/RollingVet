@@ -49,7 +49,7 @@ function Header({ cerrarSesion, user }) {
                 Administracion
               </Nav.Link>
             )}
-            {(user.rol === "ADMIN" || user.rol === "USER") && (
+            {(user.rol === "USER") && (
               <Nav.Link as={Link} to="/turnosusuario">
                 Mis Turnos
               </Nav.Link>
@@ -63,7 +63,7 @@ function Header({ cerrarSesion, user }) {
                 Registrate
               </Nav.Link>
             )}
-            {user.rol === "ADMIN" || user.rol === "USER" ? (
+            {(user.rol === "ADMIN" || user.rol === "USER") ? (
               <button className="btn nav-link" onClick={cerrarSesion}>
                 Cerrar sesión
               </button>

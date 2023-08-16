@@ -11,7 +11,6 @@ import "animate.css";
 import Button from "react-bootstrap/Button";
 import { authLogin } from "../../helpers/ApiLogin";
 import { useNavigate } from "react-router-dom";
-import { validationLogin } from "../../helpers/validations";
 import { ModalBody } from "react-bootstrap";
 
 const Login = ({ iniciarSesion, guardarUsuario }) => {
@@ -39,10 +38,10 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
     };
 
     const resp = await authLogin(datos);
-    console.log(resp);
     if (resp?.token) {
-      localStorage.setItem("token", JSON.stringify(resp.token));
       iniciarSesion();
+      localStorage.setItem("token", JSON.stringify(resp.token));
+      localStorage.setItem("usuario", JSON.stringify(resp.usuario));
       guardarUsuario(resp.usuario);
       navigate("/");
     } else {
@@ -104,7 +103,6 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
                           width="30px"
                           height="30px"
                         />
-
                         <input
                           className="inputStyle headerClass"
                           type="password"
@@ -208,7 +206,7 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
               <h4>Error! </h4>
             </Modal.Header>
             <ModalBody>
-              <h5>Datos erroneos, ingrese nuevamente</h5>
+              <h5>Correo/Contraseña incorrectos, inténtelo nuevamente</h5>
             </ModalBody>
           </Modal>
         )}
