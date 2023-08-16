@@ -12,8 +12,8 @@ const personas = [
   },
   {
     nombre: "Rodrigo Contreras",
-    descripcion: "Breve descripción de Rodrigo Contreras",
-    fotoURL: "https://via.placeholder.com/150",
+    descripcion: "33 años . Mecanico . Me gusta que el jurado nos apruebe el proyecto :)",
+    fotoURL: "https://soundstream.netlify.app/assets/integrantes/RodrigoContreras-img..jpg",
   },
   {
     nombre: "Nicolás Agüero",
@@ -32,11 +32,11 @@ const AcercaDeNosotros = () => {
   return (
     <div className="container">
       <h2>Nuestro team</h2>
-      <div className="row justify-content-center">
+      <div className="row justify-content-center align-items-stretch">
         {personas.map((persona, index) => (
-          <div key={index} className="col-md-6 col-lg-4 col-sm-4">
+          <div key={index} className="col-md-6 col-lg-4 col-sm-4 d-flex">
             <Card
-              className="mx-2 my-2 animate__animated animate__fadeInUp"
+              className="mx-2 my-2 animate__animated animate__fadeInUp d-flex flex-column"
               style={{ width: "100%" }}
             >
               <Card.Img
@@ -44,8 +44,9 @@ const AcercaDeNosotros = () => {
                 variant="top"
                 src={persona.fotoURL}
                 alt={persona.nombre}
+                style={{ height: "200px", objectFit: "cover" }}
               />
-              <Card.Body>
+              <Card.Body className="d-flex flex-column">
                 <Card.Title>{persona.nombre}</Card.Title>
                 <Card.Text>{persona.descripcion}</Card.Text>
               </Card.Body>
@@ -56,5 +57,4 @@ const AcercaDeNosotros = () => {
     </div>
   );
 };
-
 export default AcercaDeNosotros;

@@ -62,10 +62,7 @@
     width: auto;
     color: black;
   }
-  .row {
-    margin: 0 -1rem;
-    padding: 2em;
-  }
+ 
   /* Estilos para las imágenes dentro de las cards */
   .card-img-top {
     height: 200px;

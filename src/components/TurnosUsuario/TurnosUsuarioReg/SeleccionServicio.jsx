@@ -4,7 +4,7 @@ import { Card, CardGroup } from 'react-bootstrap';
 const ServiceSelection = ({ services, selectedService, onSelectService }) => {
   return (
     <div >
-      <h2 style={{textAlign:"center", margin:"1rem"}}>Servicios RollingVet</h2>
+      <h2 className='titulo-servicios'>Servicios RollingVet</h2>
       <CardGroup className='card-seleccion-servicio'>
         {services.map((service, index) => (
           <Card style={{}}
