@@ -109,7 +109,7 @@ function TurnosUsuario() {
 
   return (
     <>
-      <Container data-aos="fade-up" className="container-turnos-usuario">
+      <div data-aos="fade-up" className="container-turnos-usuario">
         <SeleccionServicio
           services={services}
           selectedService={selectedService}
@@ -174,7 +174,7 @@ function TurnosUsuario() {
             </ModalBody>
           </Modal>
         )}
-      </Container>
+      </div>
     </>
   );
 }
