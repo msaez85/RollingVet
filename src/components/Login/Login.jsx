@@ -11,6 +11,8 @@ import "animate.css";
 import Button from "react-bootstrap/Button";
 import { authLogin } from "../../helpers/ApiLogin";
 import { useNavigate } from "react-router-dom";
+import { validationLogin } from "../../helpers/validations";
+import { ModalBody } from "react-bootstrap";
 
 const Login = ({ iniciarSesion, guardarUsuario }) => {
   const navigate = useNavigate();
@@ -21,7 +23,10 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
   const [modal, setModal] = useState(false);
   const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
+  const [modalError, setModalError] = useState(false);
 
+  const mostrarModalError = () => setModalError(true);
+  const cerrarModalError = () => setModalError(false);
   const mostrarModal = () => setModal(true);
   const cerrarModal = () => setModal(false);
 
@@ -32,6 +37,7 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
       email: inputEmail,
       password: inputPassword,
     };
+
     const resp = await authLogin(datos);
     console.log(resp);
     if (resp?.token) {
@@ -39,6 +45,8 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
       iniciarSesion();
       guardarUsuario(resp.usuario);
       navigate("/");
+    } else {
+      mostrarModalError();
     }
     setResultado(resp);
     setLoading(false);
@@ -115,16 +123,20 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
                     </Button>
                     <hr />
                     <div className="">
-                      <Button className="mx-2" variant="secondary">
-                        Cancelar
-                      </Button>
-
                       <Button
                         type="submit"
                         variant="info"
-                        style={{ color: "white" }}
+                        style={{
+                          color: "white",
+                          backgroundColor: "#CF3D3F",
+                          border: "none",
+                        }}
                       >
                         Ingresar
+                      </Button>
+
+                      <Button className="mx-2" variant="secondary">
+                        Cancelar
                       </Button>
                     </div>
                   </Form>
@@ -142,9 +154,7 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
             show={modal}
             onHide={() => cerrarModal()}
             backdrop="static"
-            keyboard={false}
-            style={{ width: "100%" }}
-            className="d-flex align-items-center "
+            keyboard={true}
           >
             <Modal.Header closeButton>
               <Modal.Title style={{ fontSize: "20px" }}>
@@ -152,14 +162,13 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <Form onSubmit={enviarDatos}>
+              <Form o>
                 <ul>
                   <li>
                     <input
                       autoComplete="off"
                       type="text"
                       name="email"
-                      onChange={handleInputChange}
                       className="inputStyle"
                       placeholder="Email"
                       style={{ width: "60%" }}
@@ -169,7 +178,11 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
                 <div className="d-flex justify-content-end">
                   <Button
                     type="submit"
-                    style={{ color: "white" }}
+                    style={{
+                      color: "white",
+                      backgroundColor: "#CF3D3F",
+                      border: "none",
+                    }}
                     variant="info"
                     className="mx-2"
                   >
@@ -181,6 +194,22 @@ const Login = ({ iniciarSesion, guardarUsuario }) => {
                 </div>
               </Form>
             </Modal.Body>
+          </Modal>
+        )}
+
+        {modalError && (
+          <Modal
+            show={modalError}
+            onHide={() => cerrarModalError()}
+            backdrop="static"
+            keyboard={true}
+          >
+            <Modal.Header closeButton>
+              <h4>Error! </h4>
+            </Modal.Header>
+            <ModalBody>
+              <h5>Datos erroneos, ingrese nuevamente</h5>
+            </ModalBody>
           </Modal>
         )}
       </Container>

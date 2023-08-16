@@ -1,12 +1,13 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import "animate.css";
-import "./acercaNosotros.css"; 
+import "./acercaNosotros.css";
 
 const personas = [
   {
     nombre: "Mario Saez",
-    descripcion: "38 años, Ing. en Computacion. Software Engineer en SOVOS. Me gusta la Salsa/bachata, viajar y conocer gente nueva.",
+    descripcion:
+      "38 años, Ing. en Computacion. Software Engineer en SOVOS. Me gusta la Salsa/bachata, viajar y conocer gente nueva.",
     fotoURL: "https://i.postimg.cc/WbjYQ3N6/mario.jpg",
   },
   {
@@ -16,13 +17,14 @@ const personas = [
   },
   {
     nombre: "Nicolás Agüero",
-    descripcion: "Breve descripción de Nicolás Agüero", 
-    fotoURL: "https://via.placeholder.com/150",
+    descripcion:
+      "21 años. Estudiante de ingenieria en sistemas. Me gusta ir al gimnasio y escuchar musica",
+    fotoURL: "https://i.postimg.cc/mhx4tLNd/nico.jpg",
   },
   {
     nombre: "Luciano Durán",
     descripcion: "Breve descripción de Luciano Durán",
-    fotoURL: "https://via.placeholder.com/150", 
+    fotoURL: "https://via.placeholder.com/150",
   },
 ];
 
@@ -37,7 +39,12 @@ const AcercaDeNosotros = () => {
               className="mx-2 my-2 animate__animated animate__fadeInUp"
               style={{ width: "100%" }}
             >
-              <Card.Img className="nosotros-image" variant="top" src={persona.fotoURL} alt={persona.nombre} />
+              <Card.Img
+                className="nosotros-image"
+                variant="top"
+                src={persona.fotoURL}
+                alt={persona.nombre}
+              />
               <Card.Body>
                 <Card.Title>{persona.nombre}</Card.Title>
                 <Card.Text>{persona.descripcion}</Card.Text>

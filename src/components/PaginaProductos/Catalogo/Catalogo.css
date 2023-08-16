@@ -5,11 +5,9 @@
   font-family: "Montserrat", sans-serif;
 }
 
-
 .classCard:hover {
-  border-color: #138C91;
+  border-color: #ca413d;
   cursor: context-menu;
-  transform:scale(.9,.9) !important;
-  transition: all .2s !important;
+  transform: scale(0.9, 0.9) !important;
+  transition: all 0.2s !important;
 }
-
