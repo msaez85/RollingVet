@@ -1,4 +1,4 @@
-const url = "http://localhost:8080/api/pacientes";
+const url = "https://rollingvet-backend.onrender.com/api/pacientes";
 
 export const agregarPaciente = async (datos) => {
     const token = JSON.parse(localStorage.getItem("token"));

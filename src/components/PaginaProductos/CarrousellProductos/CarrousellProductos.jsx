@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 const CarrouselProductos = () => {
   return (
     <>
-      <div data-aos="fade-up" className="d-flex justify-content-center" fluid>
+      <div data-aos="fade-up" className="d-flex justify-content-center" >
         <Carousel fade className="classCarousell">
           <Carousel.Item interval={2500}> 
             <img className="imageStyle d-block w-100" src={banners[0].img} alt="1" />

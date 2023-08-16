@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import PaginaPrincipal from "./components/PaginaPrincipal/PaginaPrincipal";
 import Contacto from "./components/contacto/contacto";
@@ -16,10 +16,13 @@ import ProtectedRoutesAdmin from "./routes/ProtectedRoutesAdmin";
 import ProtectedRoutes from "./routes/ProtectedRoutes";
 
 function App() {
+  const navigate = useNavigate();
   const [login, setLogin] = useState(false);
-  const [user, setUser] = useState({
-    rol: "",
-  });
+  const [user, setUser] = useState(
+    localStorage.getItem("usuario")
+      ? JSON.parse(localStorage.getItem("usuario"))
+      : { rol: "" }
+  );
 
   const guardarUsuario = (datos) => {
     setUser(datos);
@@ -31,6 +34,9 @@ function App() {
 
   const cerrarSesion = () => {
     setLogin(false);
+    localStorage.clear();
+    navigate("/");
+    setUser({ rol: "" });
   };
 
   return (

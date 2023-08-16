@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { Table, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt, faTrash } from "@fortawesome/free-solid-svg-icons";
-import { validationTurno } from "../../helpers/validations";
 import FormTurno from "./FormTurno/FormTurno";
 import {
   actualizarTurno,
@@ -19,38 +18,32 @@ const TablaTurnos = () => {
   const [turnoSeleccionado, setTurnoSeleccionado] = useState(null);
 
   const handleAdd = async (nuevoTurno) => {
-    const errors = validationTurno(nuevoTurno);
-    if (Object.keys(errors).length === 0) {
-      try {
-        const response = await agregarTurno(nuevoTurno);
-        if (response.status === 200) {
-          console.log("Turno generado exitosamente");
-          setTurnos([...turnos, nuevoTurno]);
-          setShowAddModal(false);
-        }
-      } catch (error) {
-        console.log(error);
+    try {
+      const response = await agregarTurno(nuevoTurno);
+      if (response.status === 200) {
+        console.log("Turno generado exitosamente");
+        setTurnos([...turnos, nuevoTurno]);
+        setShowAddModal(false);
       }
+    } catch (error) {
+      console.log(error);
     }
   };
 
   const handleEdit = async (nuevoTurno) => {
-    const errors = validationTurno(nuevoTurno);
-    if (Object.keys(errors).length === 0) {
-      try {
-        const response = await actualizarTurno(nuevoTurno, nuevoTurno.tid);
-        if (response.status === 200) {
-          console.log("Turno editado exitosamente");
-          const turnosActualizados = turnos.map((turno) =>
-            turno === turnoSeleccionado ? { ...turno, ...nuevoTurno } : turno
-          );
-          setTurnos(turnosActualizados);
-          setTurnoSeleccionado(null);
-          setShowEditModal(false);
-        }
-      } catch (error) {
-        console.log(error);
+    try {
+      const response = await actualizarTurno(nuevoTurno, nuevoTurno.tid);
+      if (response.status === 200) {
+        console.log("Turno editado exitosamente");
+        const turnosActualizados = turnos.map((turno) =>
+          turno === turnoSeleccionado ? { ...turno, ...nuevoTurno } : turno
+        );
+        setTurnos(turnosActualizados);
+        setTurnoSeleccionado(null);
+        setShowEditModal(false);
       }
+    } catch (error) {
+      console.log(error);
     }
   };
 

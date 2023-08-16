@@ -1,4 +1,4 @@
-const url = "http://localhost:8080/api/turnos";
+const url = "https://rollingvet-backend.onrender.com/api/turnos";
 
 export const agregarTurno = async (datos) => {
     const token = JSON.parse(localStorage.getItem("token"));

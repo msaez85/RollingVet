@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./FormPaciente.css";
-import { Modal, Button, Form } from "react-bootstrap";
+import { Modal, Button, Form, ModalBody } from "react-bootstrap";
+import { validationPaciente } from "../../../helpers/validations";
 
 const FormPaciente = ({ show, onHide, onSave, mascota, isEdit }) => {
   const [formMascota, setFormMascota] = useState(mascota || {});
+  const [modalError, setModalError] = useState(false);
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     setFormMascota(mascota || {});
@@ -94,9 +97,16 @@ const FormPaciente = ({ show, onHide, onSave, mascota, isEdit }) => {
             <Button
               className="btn btn-dark mx-2"
               onClick={() => {
-                onSave(formMascota);
-                setFormMascota({});
-                onHide();
+                const erroresForm = validationPaciente(formMascota);
+                if (Object.keys(erroresForm).length === 0) {
+                  setErrors([]);
+                  onSave(formMascota);
+                  setFormMascota({});
+                  onHide();
+                } else {
+                  setErrors(erroresForm);
+                  setModalError(true);
+                }
               }}
             >
               {isEdit ? "Guardar Cambios" : "Agregar Paciente"}
@@ -104,6 +114,23 @@ const FormPaciente = ({ show, onHide, onSave, mascota, isEdit }) => {
           </Modal.Footer>
         </div>
       </Modal>
+      {modalError && (
+        <Modal
+          show={modalError}
+          onHide={() => setModalError(false)}
+          backdrop="static"
+          keyboard={true}
+        >
+          <Modal.Header closeButton>
+            <h4>Errors! </h4>
+          </Modal.Header>
+          <ModalBody>
+            {Object.keys(errors).map((key) => (
+              <h5 key={key}>{errors[key]}</h5>
+            ))}
+          </ModalBody>
+        </Modal>
+      )}
     </>
   );
 };
