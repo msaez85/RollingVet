@@ -23,8 +23,8 @@ const personas = [
   },
   {
     nombre: "Luciano Durán",
-    descripcion: "Breve descripción de Luciano Durán",
-    fotoURL: "https://via.placeholder.com/150",
+    descripcion: "22 años, autodidacta. Me gustaría seguir practicando.",
+    fotoURL: "https://i.postimg.cc/tJLKNbp9/luciano.jpg",
   },
 ];
 
