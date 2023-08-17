@@ -68,9 +68,7 @@ const PaginaDetalle = () => {
             </div>
             <p className="sinopsis">{plan.descripcion}</p>
             <iframe
-              className="my-5"
-              width="520"
-              height="315"
+              className="my-5 detalle-video"
               src={plan.video}
             ></iframe>
           </div>

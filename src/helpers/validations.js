@@ -153,3 +153,48 @@ export const validationTurno = (values) => {
   return errors;
 };
 
+export const validationRegistro = (values) => {
+  let errors = {};
+  if (!values) {
+    errors.Form = "El formulario esta vacío, complete los campos antes de enviarlo";
+  }
+
+  if (!values.usuario) {
+    errors.usuario = "El nombre es obligatorio";
+  } else if (values.usuario.length == 1 || !ExpRegNombre.test(values.usuario)) {
+    errors.usuario = "El nombre no es válido";
+  } else if (values.usuario.length > 60) {
+    errors.usuario = "El nombre no debe poseer más de 60 caracteres";
+  }
+
+  if (!values.email) {
+    errors.email = "El email es obligatorio";
+  } else if (values.email.length == 1 || !ExpRegEmail.test(values.email)) {
+    errors.email = "El email no es válido";
+  } else if (values.email.length > 30) {
+    errors.email = "El email no debe poseer más de 30 caracteres";
+  }
+
+  if (!values.password1) {
+    errors.password1 = "La contraseña es obligatoria";
+  } else if (values.password1.length < 3 || !ExpRegPass.test(values.password1)) {
+    errors.password = "La contraseña debe tener como mínimo 3 caracteres y ser valida";
+  } else if (values.password1.length > 30) {
+    errors.password1 = "La contraseña no debe poseer más de 30 caracteres";
+  }
+
+  if (!values.password2) {
+    errors.password2 = "Repetir la contraseña es obligatorio";
+  } else if (values.password2.length < 3 || !ExpRegPass.test(values.password2)) {
+    errors.password2 = "La contraseña debe tener como mínimo 3 caracteres y ser valida";
+  } else if (values.password2.length > 30) {
+    errors.password2 = "La contraseña no debe poseer más de 30 caracteres";
+  }
+
+  if (!(values.password1 && values.password2 && (values.password1 === values.password2))) {
+    errors.matchPassword = "Las contraseñas deben ser iguales";
+  }
+
+  return errors;
+};
+
