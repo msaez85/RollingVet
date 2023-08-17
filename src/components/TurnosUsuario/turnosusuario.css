@@ -16,6 +16,13 @@
 
 
 /* CSS SeleccionServicio */
+.titulo-servicios{
+    background-color: #CB2A2A !important;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
 .card-body-services{
     height:fit-content;
     text-align: center;
@@ -85,7 +92,7 @@
 /* CSS TurnosUsuario */
 .container-turnos-usuario{
     width: 100%;
-    margin: 1rem auto;
+    margin: auto;
     background-color: #FBFBFB;
     display: flex;
     flex-direction: column;
@@ -94,7 +101,21 @@
 }
 
 .container-turnos-usuario Button{
-    width: 80%;
+    width: 70%;
     padding: 0.5rem;
-    margin: 1rem auto;
+    margin: 1.5rem auto;
+    background-color: #CB2A2A;
+    border: none;
+}
+
+@media(max-width:768px) {
+    .inputs-turno{
+        display: flex;
+        flex-direction: column !important;
+    }
+    .inputs-turno input ,select{
+        height: 3rem;
+        border-radius: 5px;
+        width: 90%;
+    }
 }
