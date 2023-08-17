@@ -86,7 +86,7 @@ const FormPaciente = ({ show, onHide, onSave, mascota, isEdit }) => {
           </Modal.Body>
           <Modal.Footer>
             <Button
-              className="btn btn-dark mx-2"
+              className="btn mx-2 form-paciente-btn"
               onClick={() => {
                 onHide();
                 setFormMascota({});
@@ -95,7 +95,7 @@ const FormPaciente = ({ show, onHide, onSave, mascota, isEdit }) => {
               Cerrar
             </Button>
             <Button
-              className="btn btn-dark mx-2"
+              className="btn mx-2 form-paciente-btn"
               onClick={() => {
                 const erroresForm = validationPaciente(formMascota);
                 if (Object.keys(erroresForm).length === 0) {

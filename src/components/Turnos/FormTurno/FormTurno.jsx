@@ -95,7 +95,7 @@ const FormTurno = ({ show, onHide, onSave, turno, isEdit }) => {
           </Modal.Body>
           <Modal.Footer>
             <Button
-              className="btn btn-dark mx-2"
+              className="btn mx-2 form-turno-btn"
               onClick={() => {
                 onHide();
                 setFormTurno({});
@@ -104,7 +104,7 @@ const FormTurno = ({ show, onHide, onSave, turno, isEdit }) => {
               Cerrar
             </Button>
             <Button
-              className="btn btn-dark mx-2"
+              className="btn mx-2 form-turno-btn"
               onClick={() => {
                 const erroresForm = validationTurno(formTurno);
                 if (Object.keys(erroresForm).length === 0) {
