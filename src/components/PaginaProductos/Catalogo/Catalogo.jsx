@@ -25,10 +25,15 @@ const Catalogo = () => {
                 data-aos-once="true"
                 key={producto.id}
                 className="border-3 classCard "
-                style={{ width: "280px", height: "450px" }}
+                style={{ width: "280px", height: "530px" }}
                 onClick={() => obtenerDatos(producto)}
               >
-                <Card.Img variant="top" src={producto.img} alt="prodImagen" />
+                <Card.Img
+                  style={{ height: "280px" }}
+                  variant="top"
+                  src={producto.img}
+                  alt="prodImagen"
+                />
                 <Card.Body>
                   <Card.Title>{producto.nombre}</Card.Title>
                   <Card.Text className="classPrecio">
@@ -50,16 +55,19 @@ const Catalogo = () => {
             <Modal.Body>
               <Container fluid>
                 <div className="d-flex justify-content-center">
-                  <div>
-                    <img
-                      src={datos.img}
-                      style={{ width: "180px", height: "250px" }}
-                      alt=""
-                    />
-                  </div>
-                  <div className="p-2">
-                    <h5>Descripcion: </h5>
-                    <p>{datos.descripcion}</p>
+                  <div className="row">
+                    {" "}
+                    <div className="d-flex justify-content-center">
+                      <img
+                        src={datos.img}
+                        style={{ width: "180px", height: "280px" }}
+                        alt=""
+                      />
+                    </div>
+                    <div className="p-1 ">
+                      <h5>Descripcion: </h5>
+                      <p>{datos.descripcion}</p>
+                    </div>
                   </div>
                 </div>
               </Container>
