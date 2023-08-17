@@ -3,7 +3,7 @@ const ExpRegNombre = /^[A-Za-z]+(?:\s[A-Za-z]+)*$/,
   ExpRegTelefono = /^\d{3}-\d{3}-\d{4}$/,
   ExpRegTexto = /^[\x00-\xFF]*$/,
   ExpRegFecha = /^\d{4}-(0[1-9]|1[0-2])-([12][0-9]|3[01])$/,
-  ExpRegHora = /^(?:[01]\d|2[0-3]):[0-5]\d$/,
+  ExpRegHora = /^(0?[1-9]|1[0-2]):[0-5][0-9]$/,
   ExpRegPass = /^[A-Za-z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
 
 
