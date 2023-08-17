@@ -60,7 +60,7 @@ export const actualizarPaciente = async (datos, id) => {
   export const traerPacientes = async () => {
     const token = JSON.parse(localStorage.getItem("token"));
     try {
-      const resp = await fetch(url + "?desde=0&limite=10", {
+      const resp = await fetch(url + "?desde=0&limite=100", {
         method: "GET",
         headers: {
           "Content-type": "application/json; charset=UTF-8",
