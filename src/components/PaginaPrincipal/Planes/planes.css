@@ -28,6 +28,12 @@
     color:white;
 }
 
+@media(min-width:1360px) {
+    .contenedor-principal{
+        font-size: 3rem !important;
+    }
+  }
+
 @media(max-width:630px) {
     .contenedor-principal Button{
         width: 100%;
