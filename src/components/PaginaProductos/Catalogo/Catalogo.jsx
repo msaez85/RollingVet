@@ -21,7 +21,6 @@ const Catalogo = () => {
     try {
       const productosInicio = await traerProductos();
       setProductos(productosInicio.productos);
-      console.log(productosInicio.productos);
     } catch (error) {
       console.log(error);
     }
