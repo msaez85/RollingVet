@@ -3,35 +3,41 @@ import { Button } from "react-bootstrap";
 import "./Administracion.css";
 import Pacientes from "../Pacientes/TablaPacientes";
 import Turnos from "../Turnos/TablaTurnos";
+import Productos from "../Productos/TablaProductos";
 
 const Administracion = () => {
-  const [mostarPacientes, setMostarPacientes] = useState(true);
+  const [mostarDatos, setMostarDatos] = useState("pacientes");
 
   const cambiarTabla = (value) => {
-    setMostarPacientes(value);
+    setMostarDatos(value);
   };
 
   return (
     <>
     <div className="titulo-admin">
-      <h2>Administracion RollingVet</h2>
+      <h2>Administración RollingVet</h2>
     </div>
       <div className="administracion-btn">
         <Button
-          className={mostarPacientes ? "btn btn-dark mx-2" : "btn btn-secondary mx-2"}
-          onClick={() => cambiarTabla(true)}
+          className={mostarDatos === "pacientes" ? "btn btn-dark mx-2" : "btn btn-secondary mx-2"}
+          onClick={() => cambiarTabla("pacientes")}
         >
           Pacientes
         </Button>
         <Button
-          
-          className={mostarPacientes ? "btn btn-secondary mx-2" : "btn btn-dark mx-2"}
-          onClick={() => cambiarTabla(false)}
+          className={mostarDatos === "turnos" ? "btn btn-dark mx-2" : "btn btn-secondary mx-2"}
+          onClick={() => cambiarTabla("turnos")}
         >
           Turnos
         </Button>
+        <Button
+          className={mostarDatos === "productos" ? "btn btn-dark mx-2" : "btn btn-secondary mx-2"}
+          onClick={() => cambiarTabla("productos")}
+        >
+          Productos
+        </Button>
       </div>
-      <div>{mostarPacientes ? <Pacientes /> : <Turnos />}</div>
+      <div>{mostarDatos === "pacientes" ? <Pacientes /> : mostarDatos === "turnos" ? <Turnos /> : <Productos />}</div>
     </>
   );
 };

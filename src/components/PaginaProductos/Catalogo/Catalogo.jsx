@@ -1,12 +1,14 @@
 import Container from "react-bootstrap/Container";
-import { productos } from "../Catalogo/productos";
 import "../Catalogo/Catalogo.css";
 import Card from "react-bootstrap/Card";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
+import { traerProductos } from "../../../helpers/ApiProductos";
+
 const Catalogo = () => {
   const [show, setShow] = useState(false);
   const [datos, setDatos] = useState({});
+  const [productos, setProductos] = useState([{}]);
 
   const handleClose = () => setShow(false);
 
@@ -14,6 +16,21 @@ const Catalogo = () => {
     setDatos(producto);
     setShow(true);
   };
+
+  const traerTodosLosProductos = async () => {
+    try {
+      const productosInicio = await traerProductos();
+      setProductos(productosInicio.productos);
+      console.log(productosInicio.productos);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    traerTodosLosProductos();
+  }, []);
+
   return (
     <>
       <Container className="row d-flex justify-content-center " fluid>
@@ -23,7 +40,7 @@ const Catalogo = () => {
               <Card
                 data-aos="fade-up"
                 data-aos-once="true"
-                key={producto.id}
+                key={producto.pid}
                 className="border-3 classCard "
                 style={{ width: "280px", height: "530px" }}
                 onClick={() => obtenerDatos(producto)}
@@ -35,9 +52,9 @@ const Catalogo = () => {
                   alt="prodImagen"
                 />
                 <Card.Body>
-                  <Card.Title>{producto.nombre}</Card.Title>
+                  <Card.Title>{producto.name}</Card.Title>
                   <Card.Text className="classPrecio">
-                    Precio: {producto.precio}
+                    Precio: {producto.price}
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -50,7 +67,7 @@ const Catalogo = () => {
         <>
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title>{datos.nombre}</Modal.Title>
+              <Modal.Title>{datos.name}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <Container fluid>
@@ -65,8 +82,8 @@ const Catalogo = () => {
                       />
                     </div>
                     <div className="p-1 ">
-                      <h5>Descripcion: </h5>
-                      <p>{datos.descripcion}</p>
+                      <h5>Descripción: </h5>
+                      <p>{datos.detail}</p>
                     </div>
                   </div>
                 </div>

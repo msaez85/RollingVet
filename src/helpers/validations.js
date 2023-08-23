@@ -4,6 +4,7 @@ const ExpRegNombre = /^[A-Za-z]+(?:\s[A-Za-z]+)*$/,
   ExpRegTexto = /^[\x00-\xFF]*$/,
   ExpRegFecha = /^\d{4}-(0[1-9]|1[0-2])-([12][0-9]|3[01])$/,
   ExpRegHora = /^(0?[1-9]|1[0-2]):[0-5][0-9]$/,
+  ExpRegImagen = /\.(jpg|jpeg|png|gif|bmp|svg|webp)$/,
   ExpRegPass = /^[A-Za-z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
 
 
@@ -69,6 +70,7 @@ export const validationPaciente = (values) => {
   } else if (values.name.length > 60) {
     errors.name = "El nombre de la mascota no debe poseer más de 60 caracteres";
   }
+
   if (values.race) {
     if (values.race.length == 1 || !ExpRegTexto.test(values.race)) {
       errors.race = "La raza de la mascota no es válida";
@@ -142,6 +144,7 @@ export const validationTurno = (values) => {
   } else if (values.time.length > 5) {
     errors.time = "La hora del turno no debe poseer más de 5 caracteres";
   }
+
   if (values.detail) {
     if (values.detail.length == 1 || !ExpRegTexto.test(values.detail)) {
       errors.detail = "El detalle del turno no es válido";
@@ -198,3 +201,43 @@ export const validationRegistro = (values) => {
   return errors;
 };
 
+export const validationProducto = (values) => {
+  let errors = {};
+  if (!values) {
+    errors.Form = "El formulario esta vacío, complete los campos antes de enviarlo";
+  }
+
+  if (!values.name) {
+    errors.name = "El nombre del producto es obligatorio";
+  } else if (values.name.length == 1 || !ExpRegTexto.test(values.name)) {
+    errors.name = "El nombre del producto no es válido";
+  } else if (values.name.length > 100) {
+    errors.name = "El nombre del producto no debe poseer más de 100 caracteres";
+  }
+
+  if (!values.detail) {
+    errors.detail = "El detalle del producto es obligatorio";
+  } else if (values.detail.length == 1 || !ExpRegTexto.test(values.detail)) {
+    errors.detail = "El detalle del producto no es válido";
+  } else if (values.detail.length > 1000) {
+    errors.detail = "El detalle del turno no debe poseer más de 1000 caracteres";
+  }
+
+  if (!values.price) {
+    errors.price = "El precio del producto es obligatorio";
+  } else if (values.price.length == 1 || !ExpRegTexto.test(values.price)) {
+    errors.price = "El precio del producto no es válido";
+  } else if (values.price.length > 10) {
+    errors.price = "El precio del turno no debe poseer más de 10 caracteres";
+  }
+
+  if (values.img) {
+    if (values.img.length == 1 || !ExpRegImagen.test(values.img)) {
+      errors.img = "El link de la Imagen del producto no es válido";
+    } else if (values.img.length > 350) {
+      errors.img = "El link de la Imagen del producto no debe poseer más de 350 caracteres";
+    }
+  }
+
+return errors;
+};
