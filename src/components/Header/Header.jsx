@@ -46,7 +46,7 @@ function Header({ cerrarSesion, user }) {
             </Nav.Link>
             {user.rol === "ADMIN" && (
               <Nav.Link as={Link} to="/administracion">
-                Administracion
+                Administración
               </Nav.Link>
             )}
             {(user.rol === "USER") && (

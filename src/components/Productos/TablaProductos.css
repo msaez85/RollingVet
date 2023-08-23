@@ -1,0 +1,14 @@
+.tabla-productos-btn-agregar{
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    padding-right: 25px;
+
+}
+
+.tabla-productos-btn-agregar button{
+    background-color: #198754 !important;
+    padding: 1rem;
+    border:none
+}
+
