@@ -1,7 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
 import { banners } from "../CarrousellProductos/banners";
 import "../CarrousellProductos/CarrousellProductos.css";
-import Container from "react-bootstrap/Container";
+
 const CarrouselProductos = () => {
   return (
     <>

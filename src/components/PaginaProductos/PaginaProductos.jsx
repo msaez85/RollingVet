@@ -1,5 +1,4 @@
 import Catalogo from "./Catalogo/Catalogo";
-import Container from "react-bootstrap/Container";
 import CarrousellProductos from "./CarrousellProductos/CarrousellProductos";
 import "../PaginaProductos/PaginaProductos.css";
 

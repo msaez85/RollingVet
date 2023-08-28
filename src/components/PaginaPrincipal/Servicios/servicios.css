@@ -62,6 +62,19 @@
   
    
   
+
+
+  @media(min-width:2560px) {
+    .imagen-v2 img{width: 100%;}
+    
+
+  }
+      
+  @media(min-width:1400px) {
+    .imagen-v2 img{width: 100%;}
+    .texto-v2{font-size: 1.3rem;}
+  
+  }
   
   
   @media(max-width:630px) {
