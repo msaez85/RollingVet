@@ -44,6 +44,7 @@ const FormPaciente = ({ show, onHide, onSave, mascota, isEdit }) => {
                   name="email"
                   value={formMascota.email || ""}
                   onChange={handleChange}
+                  disabled={isEdit}
                 />
               </Form.Group>
               <Form.Group controlId="phone">

@@ -44,7 +44,7 @@ const FormTurno = ({ show, onHide, onSave, turno, isEdit }) => {
                   name="email"
                   value={formTurno.email || ""}
                   onChange={handleChange}
-                  disabled={isEdit ? "true" : "false"}
+                  disabled={isEdit}
                 />
               </Form.Group>
               <Form.Group controlId="name">
@@ -90,7 +90,7 @@ const FormTurno = ({ show, onHide, onSave, turno, isEdit }) => {
                   name="detail"
                   value={formTurno.detail || ""}
                   onChange={handleChange}
-                  disabled={isEdit ? "true" : "false"}
+                  disabled={isEdit}
                 />
               </Form.Group>
             </Form>
