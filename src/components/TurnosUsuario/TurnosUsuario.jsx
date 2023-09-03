@@ -4,7 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import SeleccionServicio from "./TurnosUsuarioReg/SeleccionServicio";
 import CalendarioHora from "./TurnosUsuarioReg/CalendarioHora";
 import "./turnosusuario.css";
-import { agregarTurno } from "../../helpers/ApiTurnos";
+import { agregarTurno, traerTurnosDiarios } from "../../helpers/ApiTurnos";
 import { validationTurno } from "../../helpers/validations";
 
 function TurnosUsuario() {
@@ -29,6 +29,7 @@ function TurnosUsuario() {
   const [selectedService, setSelectedService] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
+  const [turnsAlreadyTaken, setTurnsAlreadyTaken] = useState([]);
   const [selectedMascota, setSelectedMascota] = useState("");
   const [selectedVeterinario, setSelectedVeterinario] = useState("Jose Veterinario");
   const [reservedTurn, setReservedTurn] = useState(null);
@@ -43,12 +44,36 @@ function TurnosUsuario() {
     setSelectedMascota(e.target.value);
   };
 
-  const handleVeterinarioChange = (e) => {
+  const handleVeterinarioChange = async (e) => {
     setSelectedVeterinario(e.target.value);
+    try {
+      const takenTurns = await traerTurnosDiarios(selectedDate, e.target.value);
+      let takenTime = [];
+      if (takenTurns.turnos.length > 0) {
+        takenTurns.turnos.forEach((turno) => {
+          takenTime.push(turno.time);
+        })
+        setTurnsAlreadyTaken(takenTime);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  const handleDateChange = (e) => {
+  const handleDateChange = async (e) => {
     setSelectedDate(e.target.value);
+    try {
+      const takenTurns = await traerTurnosDiarios(e.target.value, selectedVeterinario);
+      let takenTime = [];
+      if (takenTurns.turnos.length > 0) {
+        takenTurns.turnos.forEach((turno) => {
+          takenTime.push(turno.time);
+        })
+        setTurnsAlreadyTaken(takenTime);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleTimeChange = (e) => {
@@ -118,6 +143,7 @@ function TurnosUsuario() {
         <CalendarioHora
           selectedDate={selectedDate}
           selectedTime={selectedTime}
+          turnsAlreadyTaken={turnsAlreadyTaken}
           onDateChange={handleDateChange}
           onTimeChange={handleTimeChange}
         />

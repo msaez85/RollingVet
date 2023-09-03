@@ -25,7 +25,7 @@ export const validationLogin = (values) => {
   if (!values.password) {
     errors.password = "La contraseña es obligatoria";
   } else if (values.password.length < 3 || !ExpRegPass.test(values.password)) {
-    errors.password = "La contraseña debe tener como mínimo 3 caracteres y ser valida";
+    errors.password = "La contraseña debe tener como mínimo 3 caracteres y tener caracteres validos";
   } else if (values.password.length > 30) {
     errors.password = "La contraseña no debe poseer más de 30 caracteres";
   }
@@ -181,7 +181,7 @@ export const validationRegistro = (values) => {
   if (!values.password1) {
     errors.password1 = "La contraseña es obligatoria";
   } else if (values.password1.length < 3 || !ExpRegPass.test(values.password1)) {
-    errors.password = "La contraseña debe tener como mínimo 3 caracteres y ser valida";
+    errors.password = "La contraseña debe tener como mínimo 3 caracteres y tener caracteres validos";
   } else if (values.password1.length > 30) {
     errors.password1 = "La contraseña no debe poseer más de 30 caracteres";
   }
@@ -189,7 +189,7 @@ export const validationRegistro = (values) => {
   if (!values.password2) {
     errors.password2 = "Repetir la contraseña es obligatorio";
   } else if (values.password2.length < 3 || !ExpRegPass.test(values.password2)) {
-    errors.password2 = "La contraseña debe tener como mínimo 3 caracteres y ser valida";
+    errors.password2 = "La contraseña debe tener como mínimo 3 caracteres y tener caracteres validos";
   } else if (values.password2.length > 30) {
     errors.password2 = "La contraseña no debe poseer más de 30 caracteres";
   }
