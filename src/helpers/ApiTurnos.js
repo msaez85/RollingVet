@@ -75,3 +75,24 @@ export const actualizarTurno = async (datos, id) => {
     }
   };
 
+  export const traerTurnosDiarios = async (fecha, vet) => {
+    const token = JSON.parse(localStorage.getItem("token"));
+    const veterinario = vet.replaceAll(" ", "%20");
+    try {
+      const resp = await fetch(url + "/" + fecha + "/" + veterinario + "?desde=0&limite=100", {
+        method: "GET",
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          "x-token": token,
+        },
+      });
+      console.log(url + "/" + fecha + "/" + veterinario + "?desde=0&limite=100");
+      const data = await resp.json();
+      return data;
+    } catch (error) {
+      console.log(error);
+      return { msg: "No se conectó con backend" };
+    }
+  };
+
+

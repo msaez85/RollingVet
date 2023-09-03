@@ -3,6 +3,7 @@ import React from "react";
 const CalendarioHora = ({
   selectedDate,
   selectedTime,
+  turnsAlreadyTaken,
   onDateChange,
   onTimeChange,
 }) => {
@@ -14,7 +15,8 @@ const CalendarioHora = ({
     const currentTime = new Date();
     const selectedDateTime = new Date(selectedDate);
     selectedDateTime.setHours(Math.floor(hour), hour % 1 === 0.5 ? 30 : 0, 0, 0);
-    return selectedDateTime > currentTime;
+    const formattedTime = `${Math.floor(hour)}:${hour % 1 === 0.5 ? "30" : "00"}`;
+    return selectedDateTime > currentTime && !turnsAlreadyTaken.includes(formattedTime);
   });
 
   return (
