@@ -1,4 +1,4 @@
-const url = "https://rollingvet-backend.onrender.com/api/usuarios";
+const url = "https://rolling-vet-backend.vercel.app/api/usuarios";
 
 export const agregarUsuario = async (datos) => {
   try {
