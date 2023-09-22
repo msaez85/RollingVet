@@ -1,4 +1,4 @@
-const url = "https://rollingvet-backend.onrender.com/api/turnos";
+const url = "https://rolling-vet-backend.vercel.app/api/turnos";
 
 export const agregarTurno = async (datos) => {
     const token = JSON.parse(localStorage.getItem("token"));
