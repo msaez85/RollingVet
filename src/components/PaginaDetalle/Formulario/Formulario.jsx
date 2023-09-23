@@ -27,7 +27,7 @@ function Formulario() {
         handleClose();
       })
       .catch((error) => {
-        alert(`Mensaje No Enviado!. Error: ${JSON.stringify(error)}`);
+        alert(`Mensaje No Enviado!. Por favor verifique los datos`);
         handleClose();
       });
   };
@@ -49,16 +49,17 @@ function Formulario() {
             <Form onSubmit={handleFormSubmit}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Nombre y Apellido</Form.Label>
-                <Form.Control type="text" placeholder="Juan Perez" />
+                <Form.Control required type="text" placeholder="Juan Perez" />
                 <Form.Label>Direccion de Email</Form.Label>
                 <Form.Control
                   type="email"
+                  required
                   placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <Form.Label>Telefono</Form.Label>
-                <Form.Control type="text" placeholder="381-xxxxxx" />
+                <Form.Control required type="text" placeholder="381-xxxxxx" />
                 <Form.Label>Pregunta</Form.Label>
                 <Form.Control as="textarea" rows={5} />
               </Form.Group>
