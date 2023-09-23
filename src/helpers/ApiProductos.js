@@ -1,4 +1,4 @@
-const url = "https://rollingvet-backend.onrender.com/api/productos";
+const url = "https://rolling-vet-backend.vercel.app/api/productos";
 
 export const agregarProducto = async (datos) => {
     const token = JSON.parse(localStorage.getItem("token"));
