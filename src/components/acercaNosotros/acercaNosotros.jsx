@@ -24,7 +24,7 @@ const personas = [
   {
     nombre: "Luciano Durán",
     descripcion: "22 años, autodidacta. Me gustaría seguir practicando.",
-    fotoURL: "https://i.postimg.cc/tJLKNbp9/luciano.jpg",
+    fotoURL: "https://i.postimg.cc/T1WWFqKG/IMG-20230926-190020175.jpg",
   },
 ];
 
